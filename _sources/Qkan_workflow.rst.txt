@@ -475,7 +475,7 @@ Zum Definieren des KOSTRA-DWD-Datensatzes können die Daten wie unten abgebildet
 
 Eingabeformular aus dem Programm `HYSTEM-EXTRAN, ITWH GmbH <https://itwh.de/de/softwareprodukte/desktop/hystem-extran/>`_
 
-Diese Daten können aus einem Projekt, welches `hier <https://www.fh-aachen.de/fileadmin/people/fb02_hoettges/kostra_dwd_2010r.zip>`_ zum download zur Verfügung steht, übernommen werden.
+Diese Daten können aus einem Projekt, welches `hier <https://qkan.eu/_files/kostra_dwd_2010r.zip>`_ zum download zur Verfügung steht, übernommen werden.
 Dazu muss das zu bearbeitende Gebiet auf der Karte gesucht werden.
 Im Anschluss können die Daten über |Tool_info| :guilabel:`Info-Tool` mit einem Klick auf die Karte abgerufen werden.
 
