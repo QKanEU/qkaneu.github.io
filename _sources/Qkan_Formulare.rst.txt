@@ -170,16 +170,11 @@ Mit der Funktion |Tool_export_he| :guilabel:`Export nach HYSTEM-EXTRAN` funktion
 
 ..
     (?Jörg?): (Kontrollieren bzw. ergänzen)
-    QKan-Projekt-Datenbank
-    ++++++++++++++++++++++
-    
-    Zieldatenbank
-    +++++++++++++
-    Die in diesem Formular geforderte HYSTEM-EXTRAN Vorlage-Datenbank benötigt eine Regenreihe mit einem dazugehörigen Regenschreiber 
+    -**QKan-Projekt-Datenbank:**
+    -**Zieldatenbank:** Die in diesem Formular geforderte HYSTEM-EXTRAN Vorlage-Datenbank benötigt eine Regenreihe mit einem dazugehörigen Regenschreiber 
     (muss gleichen Namen wie in den QKan-Flächendaten haben)
-    
-    Nur ausgewählte Teilgebiete berücksichtigen
-    +++++++++++++++++++++++++++++++++++++++++++
+    -**Nur ausgewählte Teilgebiete berücksichtigen:** Soll nur ein Teilgebiet bearbeitet werden, dann kann dies hier, über die Aktivierung 
+    der Schaltfläche mit anschließender Auswahl des entsprechenden Teilgebiets, geschehen.
     
     Optionen
     ++++++++
@@ -281,6 +276,100 @@ Mit der Funktion |Tool_ergebnisse_he| :guilabel:`Ergebnisse aus HYSTEM-EXTRAN 8`
     -**Überstauvolumina:**
     -**eigene Stildatei:**
     -**ohne:**
+
+Export in DYNA-Datei
+--------------------
+Mit der Funktion |Tool_export_dyna| :guilabel:`Export in DYNA-Datei` ist ein schneller Export der QKan-Daten in eine DYNA-Datei möglich.
+
+..
+    (?Jörg?): Evtl. Ergänzen welche Daten genau und wofür? (Welches Programm arbeitet mit DYNA-Dateien)
+    
+.. image:: ./QKan_Bilder/Formulare/export_dyna.png
+.. |Tool_export_dyna| image:: ./QKan_Bilder/Tool_export_dyna.png
+                             :width: 1.25 em
+..
+    (?Jörg?): (Bitte Erklärungen ergänzen)
+    -**QKan-Projekt-Datenbank:**
+    -**Ziel: DYNA-Datei:**
+    -**Nur ausgewählte Teilgebiete berücksichtigen:** Soll nur ein Teilgebiet bearbeitet werden, dann kann dies hier, über die Aktivierung 
+    der Schaltfläche mit anschließender Auswahl des entsprechenden Teilgebiets, geschehen.
+    
+    Allgemeine Optionen
+    +++++++++++++++++++
+    -**Automatische Vergabe der Kanal- und Haltungsnummern:**
+    -**Fehlende Profile in Tabelle "profile" ergänzen:**
+    
+    Zuordnung der Profile anhand...
+    +++++++++++++++++++++++++++++++
+    -**... Profilname (Langbezeichnung):** (?Jörg?): Am besten mit Beispiel, ebenso für nächsten Punkt
+    -**... Profilschlüssel:**
+    
+    Berechnung des Befestigungsgrades aus ... (?Jörg?): Erklären, wann was gewählt werden soll und Unterschiede verdeutlichen; evtl. Vorraussetzungen erwähnen
+    +++++++++++++++++++++++++++++++++++++++++
+    -**... befestigten und unbefestigten Flächenobjekten:**
+    -**... Haltungsflächen (tezg) und befestigten Flächen:**
+    -**Mit Haltungsflächen verschneiden:**
+    
+Import aus DYNA-Datei
+---------------------
+Mit der Funktion |Tool_import_dyna| :guilabel:`Import aus DYNA-Datei` können leicht Daten aus einer DYNA-Datei in ein QKan-Projekt geladen werden.
+
+.. image:: ./QKan_Bilder/Formulare/import_dyna.png
+.. |Tool_import_dyna| image:: ./QKan_Bilder/Tool_import_dyna.png
+                             :width: 1.25 em
+
+..
+    (?Jörg?): (Bitte Erklärungen ergänzen)
+    -**Datenquelle:**
+    -**Datenbank-Verbindung:**
+    -**Projektdatei erzeugen:**
+
+Import aus Mike+
+----------------
+Mit der Funktion |Tool_import_mike| :guilabel:`Import aus Mike+` kann eine Mike+ Datenbank umgeschrieben werden in eine QKan-Datenbank.
+
+.. image:: ./QKan_Bilder/Formulare/import_mike.png
+.. |Tool_import_mike| image:: ./QKan_Bilder/Tool_import_mike.png
+                             :width: 1.25 em
+
+..
+    (?Jörg?): (Bitte Erklärungen ergänzen)
+    -**Datenquelle:**
+    -**Datenziel:**
+    -**Projektdatei erzeugen:**
+    
+    Tabellen importieren
+    ++++++++++++++++++++
+    
+    Aktionen beim Import (?Jörg?): Erklären, wann was Sinn macht, wann evtl. etwas unbedingt gemacht/nicht gemacht werden sollte
+    ++++++++++++++++++++
+    -**hinzufügen:**
+    -**ändern:**
+    -**synchronisieren:**
+
+Export in SWMM-Datei
+--------------------
+Mit der Funktion |Tool_export_swmm| :guilabel:`Export in SWMM-Datei` können die Daten aus der QKan-Datenbank in eine SWMM-Datei übertragen werden.
+
+.. image:: ./QKan_Bilder/Formulare/export_swmm.png
+.. |Tool_export_swmm| image:: ./QKan_Bilder/Tool_export_swmm.png
+                             :width: 1.25 em
+
+..
+    (?Jörg?): (Bitte Erklärungen ergänzen)
+     -**QKan-Projekt-Datenbank:**
+    -**Export-Datei:**
+    -**Nur ausgewählte Teilgebiete berücksichtigen:** Soll nur ein Teilgebiet bearbeitet werden, dann kann dies hier, über die Aktivierung 
+    der Schaltfläche mit anschließender Auswahl des entsprechenden Teilgebiets, geschehen.
+    
+    Tabellen exportieren
+    ++++++++++++++++++++
+    
+    Aktionen beim Export
+    ++++++++++++++++++++
+    -**hinzufügen:**
+    -**ändern:**
+    -**neue Datei erstellen:**
     
 Import aus STRAKAT
 ------------------
@@ -410,8 +499,8 @@ Neue Projektdatei
 Zuordnung zu Teilgebiet
 -----------------------
 
-Mit der Funktion |Tool_elemente_tezg_zuordnen| :guilabel:`Zuordnung zu Teilgebiet` ist die automatische Zuordnung von Kanalnetz-Elementen zu einem
-Teilgebiet möglich. Dabei wird das Teilgebiet automatisch in die jeweilige Spalte der Datentabellen eingetragen. 
+Mit der Funktion |Tool_elemente_tezg_zuordnen| :guilabel:`Zuordnung zu Teilgebiet` ist die automatische Zuordnung aller Elemente eines 
+Entwässerungsnetzes zu einem Teilgebiet möglich. Dabei wird das Teilgebiet automatisch in die jeweilige Spalte der Datentabellen eingetragen. 
 
 .. image:: ./QKan_Bilder/Formulare/Zuordnung_zu_teilgebiet.png
 
