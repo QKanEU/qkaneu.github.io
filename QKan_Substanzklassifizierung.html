@@ -21,7 +21,9 @@
         <script src="_static/translations.js?v=57cff002"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
-    <link rel="search" title="Suche" href="search.html" /> 
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Formulare" href="QKan_Formulare.html" />
+    <link rel="prev" title="Sanierungsbedarfszahl" href="QKan_Sanierungsbedarfszahl.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,22 +50,25 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Allgemeines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_allgemein.html">Was ist QKan?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_aufsetzen.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_flaechen.html">Arbeiten mit Flächen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_workflow.html">Beispielprojekt</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SubKanS</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_Formulare.html">Formulare</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Qkan_Tabellen.html">QKan-Tabellen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Formulare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
 </ul>
 
         </div>
@@ -92,8 +97,6 @@
              
   <section id="subkans">
 <h1>SubKanS<a class="headerlink" href="#subkans" title="Link to this heading"></a></h1>
-<section id="id1">
-<h2>SubKanS<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p>Das Plugin SubKans beruht auf dem Projekt „ Entwicklung eines Standards zur Bewertung und Klassifizierung der baulichen Substanz von Abwasserkanälen und Schächten (SubKanS)“,
 welches 2021 in Zusammenarbeit der FH Aachen, der HS Magdeburg Stendal, dem Kompetenzzentrum Wasser Berlin gGmbh, dem Franz Fischer Ingenieurbüro GmbH, dem Ingenieurbüro Dr.-Ing.
 Klaus Hochstrate, der Dr.-Ing. Pecher und Partner Ingenieurgesellschaft mbH, der SiwaPlan Ingenieurgesellschaft mbH, der Stein Infrastructure Managment GmbH, der 3S Consult GmbH,
@@ -121,14 +124,17 @@ statt. Die Schadenslänge für die Umfangschäden wird für Ei-Profile nach DWA 
 Zum Schluss erfolgt die Berechnung der Substanzklassen, diese werden anhand der vorher ermittelten Abnutzung berechnet. Die folgende Zuordnung wird vorgenommen:</p>
 <img alt="_images/zustandsklassen.png" src="_images/zustandsklassen.png" />
 <p>Bei der Berechnung der Abnutzung wird die kleinste Länge die in der Datenbank vorliegt genutzt. Dafür wird die Länge in den Stammdaten, Befahrungsdaten und die letzte Stationierung miteinander verglichen.
-Die oben erläuterten Schritte können durch die Auswahlmöglichkeit in der Eingabemaske alle zusammen oder in einzelnen Schritten durchgeführt werden. Am Ende werden zwei neue Layer haltungen_substanz_bewertung und substanz_haltung_bewertung in QGIS angezeigt, diese enthalten alle Informationen aus der Substanzklassifizierung.</p>
-</section>
+Die oben erläuterten Schritte können durch die Auswahlmöglichkeit in der Eingabemaske alle zusammen oder in einzelnen Schritten durchgeführt werden. Am Ende werden zwei neue Layer
+haltungen_substanz_bewertung und substanz_haltung_bewertung in QGIS angezeigt, diese enthalten alle Informationen aus der Substanzklassifizierung.</p>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="QKan_Sanierungsbedarfszahl.html" class="btn btn-neutral float-left" title="Sanierungsbedarfszahl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="QKan_Formulare.html" class="btn btn-neutral float-right" title="Formulare" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
