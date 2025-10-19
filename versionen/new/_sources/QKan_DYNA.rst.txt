@@ -47,8 +47,8 @@ Mit der Funktion |Tool_export_dyna| :guilabel:`Export in DYNA-Datei` ist ein sch
     Soll nur ein Teilgebiet bearbeitet werden, dann kann dies hier, über die Aktivierung der Schaltfläche mit anschließender Auswahl des
     entsprechenden Teilgebiets, geschehen.
     
-    Optionen
-    ++++++++
+    Allgemeine Optionen
+    +++++++++++++++++++
     -**Automatische Vergabe der Kanal- und Haltungsnummern:**
     -**Fehlende Profile in Tabelle "profile" ergänzen:**
     

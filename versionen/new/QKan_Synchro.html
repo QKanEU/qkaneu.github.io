@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zustandsklassifizierung &mdash; QKan 3.4.8 Dokumentation</title>
+  <title>Synchronisation &mdash; QKan 3.4.8 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="Sanierungsbedarfszahl" href="QKan_Sanierungsbedarfszahl.html" />
-    <link rel="prev" title="Erstellen und Bearbeiten von Kanalnetzen" href="QKan_edit.html" /> 
+    <link rel="next" title="Hystem-Extran" href="QKan_Hystem_Extran.html" />
+    <link rel="prev" title="Verwaltung" href="QKan_Verwaltung.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,26 +55,27 @@
 <li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Zustandsklassifizierung</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Zustandsklassifizierung</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Synchronisation von QKan-Projekten</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Formulare</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Synchronisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vergleich-mit-einem-anderen-qkan-projekt">Vergleich mit einem anderen QKan-Projekt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#synchronisation-mit-anderem-qkan-projekt">Synchronisation mit anderem QKan-Projekt</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -91,9 +92,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Zustandsklassifizierung</li>
+          <li class="breadcrumb-item"><a href="QKan_Formulare.html">Formulare</a></li>
+      <li class="breadcrumb-item active">Synchronisation</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/QKan_Zustandsklassifizierung.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+            <a href="_sources/QKan_Synchro.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
   </ul>
   <hr/>
@@ -101,48 +103,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="zustandsklassifizierung">
-<h1>Zustandsklassifizierung<a class="headerlink" href="#zustandsklassifizierung" title="Link to this heading"></a></h1>
-<section id="id1">
-<h2>Zustandsklassifizierung<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<p>Um das Plugin Zustandsklassen zu nutzen, muss im Vorhinein eine Datenbank mit den notwendigen Informationen mit Hilfe des Plugins QKan erstellt werden.
-Dafür muss das Plugin QKan heruntergeladen werden und im Plugin Ordner von QGIS gespeichert werden. Dann kann zum Beispiel die Funktion „Import aus ISYBAU-XML“ genutzt
-werden um die Stammdaten und die Befahrungsdaten zu importieren. Mit Hilfe dieser Funktion wird eine QKan Datenbank erstellt, die alle benötigten Information für das Plugin
-Zustandsklassen enthält.
-Um die Zustandsklassen nun zu ermitteln, muss über die Menüleiste in QGIS die Schaltfläche „QKan“ geklickt werden. Dort kann das Plugin Zustandsklassen ausgewählt werden.</p>
-<img alt="_images/zustand1.png" src="_images/zustand1.png" />
-<p>Daraufhin öffnet sich das im folgenden gezeigte Eingabefenster:</p>
-<img alt="_images/zustand2.png" src="_images/zustand2.png" />
-<dl class="simple">
-<dt>In dem Eingabefenster sind folgende Eingaben möglich:</dt><dd><ul class="simple">
-<li><p>Datenbank</p></li>
-<li><p>Projektionssystem</p></li>
-<li><p>Auswahl der Daten nach Datum</p></li>
-<li><p>Auswahl ob Beschreibungstexte eingefügt werden sollen</p></li>
-<li><p>Auswahl Ob Zustandsklassifizierung der Haltungen nach DWA oder ISYBAU</p></li>
-<li><p>Auswahl ob Zustandsklassifizierung der Schächte nach DWA oder ISYBAU</p></li>
-<li><p>Auswahl Ob Zustandsklassifizierung der Hausanschlussleitungen nach DWA oder ISYBAU</p></li>
-<li><p>Einzelfallbetrachtung durch ISYBAU ergänzen</p></li>
-<li><p>Neuberechnung der Zustandsklassen</p></li>
-</ul>
-</dd>
-</dl>
-<p>In dem Eingabefenster wird zunächst die Datenbank ausgewählt, die für die Berechnung der Zustandsklassen genutzt wird. Danach wird das Projektionssystem ausgewählt.
-Wenn eine Datenbank ausgewählt wurde, erscheinen je nach Auswahl des Datumstyps die Erstellungsdaten oder die Befahrungsdaten der einzelnen Datensätze.
-Dann kann jeweils für die Haltungen, Hausanschlussleitungen und Schächte ausgewählt werden, Ob die Zustandsklassen nach DWA-M 149 Oder nach ISYBAU ermittelt werden sollen.
-Mit einem Klick auf OK wird das Plugin gestartet und eine Klassifizierung vorgenommen. Nachdem das Plugin durchgelaufen ist, sind die neuen Daten in der Datenbank enthalten
-und neue Layer wurden dem Projekt zugefügt.
-Wenn die Klassifizierung nach DWA-M 149 durchgeführt wurde, werden die in der folgenden Abbildung gezeigten Layer für die Haltungen und Schächte dem Projekt hinzugefügt.</p>
-<img alt="_images/zustand3.png" src="_images/zustand3.png" />
-<p>Bei einer Klassifizierung nach ISYBAU werden die in der folgenden Abbildung gezeigten Layer für die Haltungen und Schächte dem Projekt hinzugefügt.</p>
-<img alt="_images/zustand4.png" src="_images/zustand4.png" />
-<p>Bei einer Klassifizierung nach DWA-M 149 gibt es bei einigen Schäden die Klassifizierung „Einzelfallbetrachtung“. Diese können wie nach DWA vorgesehen über die Attributtabelle
-händisch nach bewertet werden. Alternativ bietet das Tool „Zustandsklassen“ die Möglichkeit eine automatisierte Ergänzung der „Einzelfallbetrachtungen“ durch eine Bewertung nach
-ISYBAU vorzunehmen.
-Im Nachgang an diese Ergänzungen ist die Neuberechnung der Gesamtklassifizierung notwendig. Dies kann mit dem Punkt „Zustandsklassen der Haltungen neu berechnen nach Bewertung der
-Einzelfallbetrachtung“ durchgeführt werden.</p>
-<p>Alternativ kann die Zustandsklassifizierung auch übersprungen werden und nur die Tabellen angelegt werden. Dabei werden schon vorhandene Klassifizierungen aus den Grundlagentabellen
-übernommen.</p>
+  <section id="synchronisation">
+<h1>Synchronisation<a class="headerlink" href="#synchronisation" title="Link to this heading"></a></h1>
+<section id="vergleich-mit-einem-anderen-qkan-projekt">
+<h2>Vergleich mit einem anderen QKan-Projekt<a class="headerlink" href="#vergleich-mit-einem-anderen-qkan-projekt" title="Link to this heading"></a></h2>
+<p>Mit dem Tool <a class="reference internal" href="_images/Tool_Abgleich.png"><img alt="Tool_vergleich" src="_images/Tool_Abgleich.png" style="width: 1.25em;" /></a> <span class="guilabel">Vergleich mit anderem QKan-Projekt</span> kann das aktuell geöffnete QKan-Projekt mit einem anderen Projekt verglichen werden.
+Dies ist besonders hilfreich, um Datenabweichungen, doppelte Elemente oder fehlende Einträge zwischen zwei Projekten zu identifizieren.</p>
+<img alt="_images/abgleich.png" src="_images/abgleich.png" />
+<p>Unter dem Punkt „QKan-Datenbank“ wird automatisch die derzeit geöffnete Datenbank angezeigt. Diese dient als Referenzprojekt für den Vergleich.
+Unter „Externe QKan-Datenbank“ kann die zweite Datenbank ausgewählt werden, mit der das aktuelle Projekt verglichen werden soll.
+Im darunterliegenden Feld wird die Anzahl der doppelten Objektnamen angezeigt, die sowohl im aktuellen Projekt als auch in der externen Datenbank vorhanden sind.
+Als letztes werden die für den Abgleich zu nutzenden TAbellen auswgewählt.</p>
+<p>Nach der Auswahl der externen Datenbank und der Tabellen startet QKan den automatischen Abgleich der Elemente.
+Doppelte oder fehlende Elemente werden markiert, sodass der Nutzer direkt erkennen kann, wo Unterschiede bestehen.
+Optional können die Ergebnisse exportiert oder als Bericht gespeichert werden, um die Datenkorrektur zu erleichtern.</p>
+</section>
+<section id="synchronisation-mit-anderem-qkan-projekt">
+<h2>Synchronisation mit anderem QKan-Projekt<a class="headerlink" href="#synchronisation-mit-anderem-qkan-projekt" title="Link to this heading"></a></h2>
+<p>Nach dem Vergleich von zwei QKan-Projekten kann das Tool <a class="reference internal" href="_images/Tool_Sync.png"><img alt="Tool_synchro" src="_images/Tool_Sync.png" style="width: 1.25em;" /></a> <span class="guilabel">Synchronisation mit anderem QKan-Projekt</span> verwendet werden,
+um die Daten des aktuellen Projekts mit den Informationen aus einem anderen Projekt aktualisieren zu lassen.</p>
+<img alt="_images/sync.png" src="_images/sync.png" />
+<p>Die Pfade der beiden zu synchronisierenden Datenbanken werden automatisch aus dem zuvor durchgeführten Vergleich mit anderem QKan-Projekt übernommen.
+Während des Synchronisationsprozesses wird ein Protokoll erstellt, das alle vorgenommenen Änderungen dokumentiert.
+Für dieses Protokoll kann der Nutzer einen Speicherort festlegen, um die Änderungen nachvollziehen und ggf. rückgängig machen zu können.
+Am Ende des Formulars wird die Anzahl der doppelten Objektnamen angezeigt, die sowohl im aktuellen als auch im externen Projekt vorhanden sind.
+Dies ermöglicht eine schnelle Kontrolle, welche Elemente ggf. manuell überprüft werden müssen.</p>
 </section>
 </section>
 
@@ -150,8 +135,8 @@ Einzelfallbetrachtung“ durchgeführt werden.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="QKan_edit.html" class="btn btn-neutral float-left" title="Erstellen und Bearbeiten von Kanalnetzen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="QKan_Sanierungsbedarfszahl.html" class="btn btn-neutral float-right" title="Sanierungsbedarfszahl" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="QKan_Verwaltung.html" class="btn btn-neutral float-left" title="Verwaltung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="QKan_Hystem_Extran.html" class="btn btn-neutral float-right" title="Hystem-Extran" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
