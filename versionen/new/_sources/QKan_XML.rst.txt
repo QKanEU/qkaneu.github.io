@@ -49,6 +49,8 @@ Wenn in der zu importierenden Datei individuelle Knotentypen abweichend vom M150
 enthalten sind, muss wegen der abweichenden Interpretation von Sonderbauwerken in QKan gegenüber der DWA-Richtlinie eine Zuordnung zu 
 der Knotenarten zu den Schachttypen in QKan vorgenommen werden. 
 
+.. image:: ./QKan_Bilder/M150_Knotenarten.png
+
 Der Dateiimport zeigt die entsprechende Tabelle an, damit nach Aktivierung des Bearbeitungsmodus der Anwender die Spalte *QKan-Schachttyp* 
 entsprechend bearbeitet. Solange diese Zuordnung nicht vollständig ist, wird statt des Datenimportes jedes Mal diese Tabelle angezeigt. 
 
