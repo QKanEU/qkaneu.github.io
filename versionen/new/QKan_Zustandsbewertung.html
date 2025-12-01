@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SWMM &mdash; QKan 3.4.8 Dokumentation</title>
+  <title>Zustandsbewertung &mdash; QKan 3.4.8 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="STRAKAT" href="QKan_STRAKAT.html" />
-    <link rel="prev" title="Mike+" href="QKan_Mike.html" /> 
+    <link rel="next" title="Substanzbewertung" href="QKan_Substanzbewertung.html" />
+    <link rel="prev" title="Flächenverarbeitung" href="QKan_Flaechenverarbeitung.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -77,30 +77,14 @@
 <li class="toctree-l2"><a class="reference internal" href="QKan_XML.html">XML-Importe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_DYNA.html">DYNA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Mike.html">Mike+</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">SWMM</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#import-aus-swmm-datei">Import aus SWMM-Datei</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#datenquelle">Datenquelle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#datenbank-verbindung">Datenbank-Verbindung</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#projektdatei-erzeugen">Projektdatei erzeugen</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#export-in-swmm-datei">Export in SWMM-Datei</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#qkan-projekt-datenbank">QKan-Projekt-Datenbank</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#export-datei">Export-Datei</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#nur-ausgewahlte-teilgebiete-berucksichtigen">Nur ausgewählte Teilgebiete berücksichtigen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tabellen-exportieren">Tabellen exportieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#aktionen-beim-export">Aktionen beim Export</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#ergebnis-import-aus-swmm">Ergebnis Import aus SWMM</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Datenquelle</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_SWMM.html">SWMM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_STRAKAT.html">STRAKAT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Flaechenverarbeitung.html">Flächenverarbeitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QKan_Zustandsbewertung.html">Zustandsbewertung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Zustandsbewertung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#zustandsklassifizierung">Zustandsklassifizierung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sanierungsbedarfszahl">Sanierungsbedarfszahl</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Substanzbewertung.html">Substanzbewertung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Ueberflutung.html">Ueberflutung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Formulare.html#allgemeine-funktionselemente-in-formularen">Allgemeine Funktionselemente in Formularen</a></li>
@@ -125,9 +109,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="QKan_Formulare.html">Formulare</a></li>
-      <li class="breadcrumb-item active">SWMM</li>
+      <li class="breadcrumb-item active">Zustandsbewertung</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/QKan_SWMM.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+            <a href="_sources/QKan_Zustandsbewertung.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
   </ul>
   <hr/>
@@ -135,64 +119,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="swmm">
-<h1>SWMM<a class="headerlink" href="#swmm" title="Link to this heading"></a></h1>
-<section id="import-aus-swmm-datei">
-<h2>Import aus SWMM-Datei<a class="headerlink" href="#import-aus-swmm-datei" title="Link to this heading"></a></h2>
-<p>Mit der Funktion <a class="reference internal" href="_images/Tool_import_swmm.png"><img alt="Tool_import_swmm" src="_images/Tool_import_swmm.png" style="width: 1.25em;" /></a> <span class="guilabel">Import aus SWMM-Datei</span> können Daten aus einer SWMM-Datei in ein QKan-Projekt geladen werden.</p>
-<img alt="_images/import_swmm.png" src="_images/import_swmm.png" />
-<section id="datenquelle">
-<h3>Datenquelle<a class="headerlink" href="#datenquelle" title="Link to this heading"></a></h3>
-<p>In diesem Bereich wird die mit SWMM erstellte Quelldatenbank (Endung .inp) ausgewählt. Darunter muss das Projektionssystem ausgewählt werden,
-in dem die Daten <strong>in der Datenquelle</strong> gespeichert sind. In dem gleichen Projektionssystem wird das QKan-Projekt aufgebaut, sodass beide
-Projektionssysteme identisch sind.</p>
+  <section id="zustandsbewertung">
+<h1>Zustandsbewertung<a class="headerlink" href="#zustandsbewertung" title="Link to this heading"></a></h1>
+<section id="zustandsklassifizierung">
+<span id="index-0"></span><h2>Zustandsklassifizierung<a class="headerlink" href="#zustandsklassifizierung" title="Link to this heading"></a></h2>
+<p>Mit der Funktion <a class="reference internal" href="_images/Tool_zustandsklassen.png"><img alt="Tool_zustandsklassifizierung" src="_images/Tool_zustandsklassen.png" style="width: 1.25em;" /></a> <span class="guilabel">Zustandsklassifizierung</span> kann eine automatisierte Bewertung des baulichen Zustands des Kanalnetzes nach den Regelwerken
+DWA-M 149-3 oder ISYBAU durchgeführt werden.
+Diese Funktion dient der einheitlichen und reproduzierbaren Einstufung von Schäden an Haltungen, Schächten und Hausanschlussleitungen,
+die im Rahmen einer Kanalinspektion erfasst wurden.</p>
+<img alt="_images/zustandsklassen.png" src="_images/zustandsklassen.png" />
+<p>Zunächst wird die QKan-Datenbank ausgewählt, in der die Schadensdaten gespeichert sind.
+Zusätzlich kann über ein Datum festgelegt werden, welche Schäden in die Bewertung einbezogen werden sollen (z. B. nur Inspektionen an einem bestimmten Stichtag).
+Es kann entschieden werden, ob für die in der Datenbank enthaltenen Schadenskürzel automatisch die zugehörigen Langtexte erzeugt werden sollen.
+Diese Option erleichtert die Interpretation und Dokumentation der Schadensdaten, insbesondere bei der späteren Berichtsausgabe.</p>
+<p>Anschließend wird festgelegt, ob die Klassifizierung nach DWA-M 149-3 oder ISYBAU durchgeführt werden soll.
+Die Bewertung erfolgt dabei automatisiert anhand der in der Datenbank enthaltenen Schadenskürzel und der jeweiligen Regelwerksdefinitionen.</p>
+<p>Nach dem Start der Klassifizierung werden alle relevanten Schäden analysiert und die entsprechenden Zustandsklassen (z. B. 0–5) für jedes Objekt berechnet.
+Die Ergebnisse werden in die QKan-Datenbank zurückgeschrieben und können anschließend in Berichten, Diagrammen oder Übersichtsplänen visualisiert werden.</p>
 </section>
-<section id="datenbank-verbindung">
-<h3>Datenbank-Verbindung<a class="headerlink" href="#datenbank-verbindung" title="Link to this heading"></a></h3>
-<p>Hier wird das Datenziel - die Sqlite-Datenbank - ausgewählt. Ist noch keine Zieldatenbank vorhanden, kann diese hier erstellt werden.</p>
-</section>
-<section id="projektdatei-erzeugen">
-<h3>Projektdatei erzeugen<a class="headerlink" href="#projektdatei-erzeugen" title="Link to this heading"></a></h3>
-<p>Werden die Daten in ein bereits existierendes Projekt geladen, dann ist hier bereits der Pfad der verwendeten Projektdatei angegeben.
-Existiert noch keine Projektdatei, kann diese hier erstellt werden. Dabei ist es empfehlenswert, diese im selben Verzeichnis mit der
-QKan-Datenbank zu speichern.</p>
-</section>
-</section>
-<section id="export-in-swmm-datei">
-<h2>Export in SWMM-Datei<a class="headerlink" href="#export-in-swmm-datei" title="Link to this heading"></a></h2>
-<p>Mit der Funktion <a class="reference internal" href="_images/Tool_export_swmm.png"><img alt="Tool_export_swmm" src="_images/Tool_export_swmm.png" style="width: 1.25em;" /></a> <span class="guilabel">Export in SWMM-Datei</span> können die Daten aus der QKan-Datenbank in eine SWMM-Datei übertragen werden.</p>
-<img alt="_images/export_swmm.png" src="_images/export_swmm.png" />
-<section id="qkan-projekt-datenbank">
-<h3>QKan-Projekt-Datenbank<a class="headerlink" href="#qkan-projekt-datenbank" title="Link to this heading"></a></h3>
-<p>In diesem Bereich wird automatisch die aktuelle QKan-Datenbank eingetragen.</p>
-</section>
-<section id="export-datei">
-<h3>Export-Datei<a class="headerlink" href="#export-datei" title="Link to this heading"></a></h3>
-<p>In diesem Bereich werden die Vorlage für die ERstellung der SWMM-Datei und die zu erstellende Ergebnisdatei ausgewählt.</p>
-</section>
-<section id="nur-ausgewahlte-teilgebiete-berucksichtigen">
-<h3>Nur ausgewählte Teilgebiete berücksichtigen<a class="headerlink" href="#nur-ausgewahlte-teilgebiete-berucksichtigen" title="Link to this heading"></a></h3>
-<p>Soll nur ein Teilgebiet bearbeitet werden, dann kann dies hier, über die Aktivierung der Schaltfläche mit anschließender Auswahl des
-entsprechenden Teilgebiets, geschehen.</p>
-</section>
-<section id="tabellen-exportieren">
-<h3>Tabellen exportieren<a class="headerlink" href="#tabellen-exportieren" title="Link to this heading"></a></h3>
-</section>
-<section id="aktionen-beim-export">
-<h3>Aktionen beim Export<a class="headerlink" href="#aktionen-beim-export" title="Link to this heading"></a></h3>
-<p>-<strong>hinzufügen:</strong>
--<strong>ändern:</strong>
--<strong>neue Datei erstellen:</strong></p>
-</section>
-</section>
-<section id="ergebnis-import-aus-swmm">
-<h2>Ergebnis Import aus SWMM<a class="headerlink" href="#ergebnis-import-aus-swmm" title="Link to this heading"></a></h2>
-<p>Mit der Funktion <a class="reference internal" href="_images/Tool_import_swmm.png"><img alt="Tool_import_swmm" src="_images/Tool_import_swmm.png" style="width: 1.25em;" /></a> <span class="guilabel">Ergebnis Import aus SWMM</span> können Ergebnisdaten aus einer SWMM-Datei in ein QKan-Projekt geladen werden.</p>
-<img alt="_images/import_swmm_erg.png" src="_images/import_swmm_erg.png" />
-<section id="id1">
-<h3>Datenquelle<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
-<p>In diesem Bereich wird die mit SWMM erstellte Ergebnissdatei (Endung .rpt) ausgewählt.</p>
-</section>
+<section id="sanierungsbedarfszahl">
+<span id="index-1"></span><h2>Sanierungsbedarfszahl<a class="headerlink" href="#sanierungsbedarfszahl" title="Link to this heading"></a></h2>
+<p>Mit dem Tool <a class="reference internal" href="_images/Tool_sanierungsbedarfszahl.png"><img alt="Tool_sanierungsbedarfszahl" src="_images/Tool_sanierungsbedarfszahl.png" style="width: 1.25em;" /></a> <span class="guilabel">Sanierungsbedarfszahl</span> kann im Anschluss an die Zustandsklassifizierung die Sanierungsbedarfszahl nach DWA-M 149-3 bzw.
+die Schadenszahl nach ISYBAU ermittelt werden.
+Diese Kennzahlen dienen der quantitativen Bewertung des Sanierungsbedarfs einzelner Haltungen, Schächte oder Hausanschlussleitungen und
+unterstützen die Priorisierung von Sanierungsmaßnahmen im Kanalnetz.</p>
+<img alt="_images/sanierung2.png" src="_images/sanierung2.png" />
+<p>Bevor die Berechnung durchgeführt werden kann, müssen bestimmte Grundlagendaten in der QKan-Datenbank vorhanden oder ergänzt werden. Dazu gehören insbesondere
+Angaben zum Grundwasserstand (z. B. mittlere Tiefe oder Abstand zur Rohrsohle), Materialdaten der Haltungen und Schächte sowie
+Ergebnisse der Zustandsklassifizierung (nach DWA-M 149-3 oder ISYBAU).</p>
 </section>
 </section>
 
@@ -200,8 +154,8 @@ entsprechenden Teilgebiets, geschehen.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="QKan_Mike.html" class="btn btn-neutral float-left" title="Mike+" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="QKan_STRAKAT.html" class="btn btn-neutral float-right" title="STRAKAT" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="QKan_Flaechenverarbeitung.html" class="btn btn-neutral float-left" title="Flächenverarbeitung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="QKan_Substanzbewertung.html" class="btn btn-neutral float-right" title="Substanzbewertung" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
