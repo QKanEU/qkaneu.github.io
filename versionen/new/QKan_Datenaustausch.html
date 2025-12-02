@@ -59,7 +59,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Datenaustausch</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#datenaustausch-mit-xml-dateien">Datenaustausch mit XML-Dateien</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#dwa-m-150">DWA-M 150</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#referenztabellen">Referenztabellen</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#baufachliche-richtlinien-abwasser-vormals-isybau">Baufachliche Richtlinien Abwasser (vormals ISYBAU)</a></li>
@@ -121,25 +120,11 @@ Jahre in Anspruch nehmen wird.</p>
 Versionen 2013, 2017 und 2024 mehrfach überarbeitet wurde.</p>
 <section id="dwa-m-150">
 <span id="id1"></span><h3>DWA-M 150<a class="headerlink" href="#dwa-m-150" title="Link to this heading"></a></h3>
-<p>Das Datenaustauschformat gemäß DWA-M M150 (kurz: <em>M150</em>) umfasst je nach Bedarf Kanalstammdaten, Hausanschlussdaten
+<p>Das Datenaustauschformat gemäß DWA-M 150 (kurz: <em>M150</em>) umfasst je nach Bedarf Kanalstammdaten, Hausanschlussdaten
 sowie Zustandsdaten. Beim Datenimport ist zu berücksichtigen, dass QKan anstelle von Schlüsselwerten (z. B. <em>RW</em> für
 <em>Regenwasser</em>) in den Datentabellen (Haltungen, Schächte, etc.) die Langbezeichnungen verwendet. Hintergrund ist, dass
 der Anwender die Tabellen auch direkt in der QGIS-Ansicht <em>Attributtabellen</em> bearbeiten kann.</p>
-<p>Die Schlüsselwerte für den Datenaustausch sind in der QKan-Gruppe <em>Referenztabellen</em> zu finden. Die Schlüsselwerte
-der DWA-M 150 befinden sich in der entsprechenden Spalte.</p>
-</section>
-<section id="referenztabellen">
-<h3>Referenztabellen<a class="headerlink" href="#referenztabellen" title="Link to this heading"></a></h3>
-<p>Folgende Referenztabellen sind für den Datenimport relevant, um Schlüsselwerte aus der zu importierenden XML-Datei den entsprechenden
-Attributen von QKan zuzuordnen:</p>
-<ul class="simple">
-<li><p>Entwässerungsarten</p></li>
-<li><p>Profile</p></li>
-<li><p>Material</p></li>
-<li><p>Planungsstatus</p></li>
-<li><p>Wetter</p></li>
-<li><p>Knotenarten</p></li>
-</ul>
+<p>Die Schlüsselwerte für den Datenaustausch sind ab Version 3.4.8 in der QKan-Tabelle <em>Alle Referenzdaten</em> zu finden.</p>
 </section>
 </section>
 <section id="baufachliche-richtlinien-abwasser-vormals-isybau">

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daten &mdash; QKan 3.3.1 Dokumentation</title>
+  <title>Daten &mdash; QKan 3.4.8 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="Beispielprojekt" href="QKan_workflow.html" />
+    <link rel="next" title="Beispielprojekte" href="QKan_workflow.html" />
     <link rel="prev" title="Arbeiten mit Flächen" href="QKan_flaechen.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.2
+                3.4.8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -60,19 +60,23 @@
 <li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Daten</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#plausibilitatsprufung">Plausibilitätsprüfung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#auswahl-erweitern-netzverfolgung">Auswahl erweitern / Netzverfolgung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#langsschnitt">Längsschnitt</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Synchronisation von QKan-Projekten</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Formulare</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 </ul>
 
         </div>
@@ -132,6 +136,68 @@ eine andere als die vorgegebenen Bezeichnungen zu verwenden, z. B. „Netzstrukt
 vorgegebenen Standardgruppen (z. B. „Geoobjekte“, „HYSTEM-EXTRAN“, „Netzstruktur“) von den Aktualisierungen
 betroffen sind (siehe auch Abbildung oben: „Plausibilitätsprüfungen“).</p>
 </section>
+<section id="auswahl-erweitern-netzverfolgung">
+<span id="index-0"></span><h2>Auswahl erweitern / Netzverfolgung<a class="headerlink" href="#auswahl-erweitern-netzverfolgung" title="Link to this heading"></a></h2>
+<p>Mit dem Tool <a class="reference internal" href="_images/Tool_auswahl.png"><img alt="Tool_auswahl" src="_images/Tool_auswahl.png" style="width: 1.25em;" /></a> <span class="guilabel">Auswahl erweitern/Netzverfolgung</span> kann auf verschiedene Arten eine Auswahl
+von Elementen im Kanalnetz erzeugt werden. Die ausgewählten Elemente werden
+automatisch in den Datenbanktabellen sel_schaechte, sel_haltungen und sel_flaechen gespeichert.</p>
+<img alt="_images/auswahl_netzverfolgung.png" src="_images/auswahl_netzverfolgung.png" />
+<p>Bei einer erneuten Auswahl werden die bestehenden Einträge in diesen Tabellen automatisch überschrieben, sodass
+immer nur die aktuell ausgewählten Elemente berücksichtigt werden.
+Auswahlmöglichkeiten im Detail</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Kanalnetz oberhalb / unterhalb / längster Fließweg oberhalb</dt><dd><ul class="simple">
+<li><p>Für diese Auswahlmethoden muss mindestens ein Schacht im Kanalnetz ausgewählt werden.</p></li>
+<li><p>Das Tool markiert automatisch alle Schächte, Haltungen und zugehörigen Flächen, die stromaufwärts oder
+stromabwärts vom ausgewählten Schacht liegen bzw. entlang des längsten
+Fließweges oberhalb.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Auswahl zwischen zwei Elementen</dt><dd><ul class="simple">
+<li><p>Hierfür können entweder zwei Schächte oder zwei Haltungen ausgewählt werden.</p></li>
+<li><p>Das Tool wählt automatisch alle Elemente aus, die zwischen diesen beiden Punkten liegen, unabhängig davon,
+wie viele Haltungen dazwischen liegen.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Auswahl innerhalb von Teilgebieten</dt><dd><ul class="simple">
+<li><p>Um alle Elemente eines bestimmten Teilgebiets auszuwählen, muss das entsprechende Teilgebiet ausgewählt werden.</p></li>
+<li><p>Das Tool markiert dann alle Schächte, Haltungen und Flächen, die zu diesem Teilgebiet gehören.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<dl class="simple">
+<dt>Hinweise</dt><dd><ul class="simple">
+<li><p>Jede Auswahl wird sofort in den Datenbanktabellen gespeichert, sodass nachfolgende Funktionen wie Längsschnitt, Substanzklassifizierung oder Export direkt auf dieser
+Auswahl arbeiten können.</p></li>
+<li><p>Bei Änderungen an der Auswahl empfiehlt es sich, die Tabellen ggf. zu aktualisieren, um sicherzustellen, dass
+alle Analysen auf den aktuellen Elementen basieren.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="langsschnitt">
+<span id="index-1"></span><h2>Längsschnitt<a class="headerlink" href="#langsschnitt" title="Link to this heading"></a></h2>
+<p>Mit dem Tool <a class="reference internal" href="_images/Tool_laengsschnitt.png"><img alt="Tool_laengsschnitt" src="_images/Tool_laengsschnitt.png" style="width: 1.25em;" /></a> <span class="guilabel">Längsschnitt</span> lassen sich Längsschnitte des Kanalnetzes erzeugen.</p>
+<img alt="_images/laengsschnitt.png" src="_images/laengsschnitt.png" />
+<p>Um den Längsschnitt nutzen zu können, müssen zunächst Elemente aus dem Layer „Schächte“ oder „Haltungen“ ausgewählt werden. Der Längsschnitt wird entweder
+zwischen zwei ausgewählten Elementen erzeugt oder entlang einer Reihe mehrerer ausgewählter Elemente.
+Wenn sich die Auswahl oder Eingaben ändern, kann über den Refresh-Button die Anzeige aktualisiert werden.
+Mit dem Button „Auswahl anzeigen“ lassen sich die für den Längsschnitt verwendeten Elemente erneut in der Karte markieren.
+Mit dem Button „Export in DXF“ kann eine DXF Datei vom aktuell angezeigt Längsschnitt abgespeichert werden. Wenn der maximale Wasserstand aktiviert ist, wird dieser mit exportiert.
+Damit die Anzeige des maximalen Wasserstands, der animierte Längsschnitt sowie die Ganglinie genutzt werden können, muss zunächst eine HYSTEM-EXTRAN-Ergebnisdatei ausgewählt werden.
+Im Anschluss kann im Reiter „Animierter Längsschnitt“ über den Button „Längsschnitt anzeigen“ der animierte Längsschnitt geöffnet werden
+Die Animation kann anschließend über die Steuerelemente im unteren Bereich in Bezug auf Abspielgeschwindigkeit und Zeitpunkt bedient werden.
+Im Reiter „Ganglinien“ lassen sich mit dem Button „Ganglinie anzeigen“ verschiedene Ganglinien aus den Ergebnisdaten erzeugen – beispielsweise Zufluss, Wasserstand oder Durchfluss.</p>
+</section>
 </section>
 
 
@@ -139,13 +205,13 @@ betroffen sind (siehe auch Abbildung oben: „Plausibilitätsprüfungen“).</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="QKan_flaechen.html" class="btn btn-neutral float-left" title="Arbeiten mit Flächen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="QKan_workflow.html" class="btn btn-neutral float-right" title="Beispielprojekt" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="QKan_workflow.html" class="btn btn-neutral float-right" title="Beispielprojekte" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2017 - 2022, Hoettges.</p>
+    <p>&#169; Copyright 2017 - 2025, Hoettges.</p>
   </div>
 
   Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem

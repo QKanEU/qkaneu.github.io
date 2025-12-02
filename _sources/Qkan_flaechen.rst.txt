@@ -84,13 +84,13 @@ Erstellung eines Teilgebietes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Ein Teilgebiet kann leicht aus :ref:`Haltungsflächen <linkhaltungsflaechen>` erzeugt werden. Dazu müssen alle Haltungsflächen auf dem 
 gleichnamigen Layer ausgewählt werden, welche ein Teilgebiet ergeben sollen und über :guilabel:`Bearbeiten` → :guilabel:`Objekte kopieren` 
-kopiert werden. Anschließend können diese auf dem Layer "Teilgebiete" eingefügt werden, wenn dieser sich im |Tool_bearbeitungsmodus| 
+kopiert werden. Anschließend können diese auf dem Layer "Teilgebiete" eingefügt werden, wenn dieser sich im |Tool_bearbeitungs_modus| 
 :guilabel:`Bearbeitungsmodus` befindet. Als erstes müssen nun die eingefügten Flächen mit |Tool_layeraenderungen_speichern| 
 :guilabel:`Layeränderungen speichern` gespeichert werden, damit sie im Folgenden mit |Tool_objekte_verschmelzen| 
 :guilabel:`Gewählte Objekte verschmelzen` zusammen gefasst werden können. In der Attribut-Tabelle kann das Teilgebiet in der Spalte 
 "Namen" benannt werden. Soll die Bearbeitung des Projektes in den erstellten Teilgebieten geschehen, müssen nun als nächstes die Elemente 
 des Entwässerungsnetzes den Teilgebieten zugeordnet werden. Dies ist mit der :ref:`Funktion <linkelementeteilgebietzuordnen>` |Tool_elemente_tezg_zuordnen| 
-:guilabel:`Zuordnung zu Teilgebiet` möglich (Option "überlappend sollte ausgewählt werden).
+:guilabel:`Zuordnung zu Teilgebiet` möglich (Option "überlappend" sollte ausgewählt werden).
 
 .. |Tool_layeraenderungen_speichern| image:: ./QKan_Bilder/Tool_layeraenderungen_speichern.png
                              :width: 1.25 em
@@ -127,57 +127,40 @@ Heute werden die Haltungsflächen nur noch für zwei Aufgaben benötigt:
     #. **Erzeugung der unbefestigten Flächen**: diese werden als eigenständige Flächenobjekte gebraucht, um ihnen spezifische Abflussparameter zuordnen zu können, u. a. die Bodenklasse 
     #. **Geometrische Aufteilung von Flächen**, die so groß sind, dass sie mehreren Haltungen zugeordnet werden müssen. 
 
-Nach wie vor gilt die Anforderung, dass die Haltungsflächen das gesamte Einzugsgebiet geschlossen abdecken müssen. 
-Da in der heutigen Zeit in der Regel die Grundstücksflächen als Open Data zur  Verfügung stehen, bietet es sich an, 
-diese als Ersatz für die früher mühsam erstellten Haltungsflächen einzusetzen.
-Die nachfolgend erläuterten Schritte dienen der Datenvorbereitung. 
+Nach wie vor gilt für den Export aus QKan in eine Simulationsprogramm die Anforderung, dass die Haltungsflächen das gesamte Einzugsgebiet geschlossen abdecken müssen. 
+QKan bietet mit dem der automatischen Erzeugung von Haltungslfächen die Möglichkeit, bezogen auf Teilgebiete automatisiert Haltungsflächen zu erzeugen. Dabei 
+werden bereits vorhandene Haltungsflächen berücksichtigt (und nicht geändert). 
+Da in der heutigen Zeit in der Regel die Grundstücksflächen als Open Data zur Verfügung stehen, bietet es sich an, 
+diese als Ersatz für die früher mühsam erstellten Haltungsflächen einzusetzen, und nur dort automatisch Haltungsflächen zu erzeugen, wo diese nicht geeignet sind. Dies ist z. B. 
+bei Straßenflächen der Fall, weil sich diese über viele Haltungen erstrecken und deshalb wieter aufgeteilt werden müssten. Damit in diesen Bereichen eine automatische Aufteilung 
+erfolgt, müssen diese Flächen im Layer *Haltungsflächen* gelöscht werden. 
 
-    #. Die sogenannten Transporthaltungen werden so markiert, dass sie nicht berücksichtigt werden. Es handelt sich dabei um die Haltungen, die nicht an eine Regenentwässerung angeschlossen sind und somit bei der Flächenzuordnung nicht berücksichtigt werden sollen. 
-    #. Markieren der aufzuteilenden Flächen. Da die Funktion nur diese Flächen bearbeiten muss, spart QKan erheblich Zeit im Vergleich mit einer Bearbeitung aller Flächen.
+Die nachfolgend erläuterten Schritte dienen der Datenvorbereitung. 
 
 .. _linktransporthaltungen:
 
-Markierung von Transporthaltungen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Die Markierung erfolgt hier indirekt über die Zuordnung einer entsprechenden Entwässerungsart: In der 
-entsprechenden Referenztabelle, die in der Layerkontrolle in der Gruppe "Referenztabellen" zu finden ist, 
-sind eigene Datensätze für Transporthaltungen enthalten, die in der Spalte "ohne RW-Zufluss" den Wert 1 haben sollen 
-bzw. das Häkchen gesetzt sein soll. Für betreffenden Haltungen muss nun eine dieser Entwässerungsarten gesetzt werden.
-Dazu sollen alle Haltungen ausgewählt werden, an die kein Regenwasser angeschlossen ist. Das sind zum einen 
-Transporthaltungen aber auch kurze Verbindungs-Haltungen in Kreuzungsbereichen oder ähnlichem, denen im Folgenden 
-keine Flächen zugeordnet werden sollen (siehe Bild unten).
-
-Sind alle Flächen ausgewählt, kann mit :guilabel:`F6` die Attributtabelle geöffnet werden und der 
-|Tool_bearbeitungsmodus| :guilabel:`Bearbeitungsmodus` eingeschalten werden. Es empfiehlt sich, nur die 
-ausgewählten Datensätze anzeigen zu lassen. Dazu kann unten links in der Schaltfläche 
-:guilabel:`Alle gewählten Objekte anzeigen` ausgewählt werden (roter Kasten links, siehe Bild unten).
-
-Um Tippfehler beim nächsten Schritt zu vermeiden, sollte zunächst einen Datensatz in der Formularansicht bearbeitet 
-werden. Dazu dient die zweiten Schaltfläche rechts unten (roter Kasten rechts, siehe Bild unten).
-
-.. image:: ./QKan_Bilder/Flaechen_vorbereiten/liste_gewaehlte_haltungen.png
-
-.. |Tool_bearbeitungsmodus| image:: ./QKan_Bilder/Tool_bearbeitungsmodus.png
-                             :width: 1.25 em
-
-Nun wird als Entwässerungssystem eine der nicht angeschlossenen Arten, z. B. "MW nicht angeschlossen" gewählt. 
-Anschließend kann wieder in die Listen-Ansicht gewechselt werden. 
-Mit einem Rechtsklick auf die geänderte Zelle kann der Zellinhalt kopiert werden. 
-Dann kann in der Drop-Down-Liste der Quick Field Calculation Bar die Spalte :guilabel:`Entwässerungssystem` 
-gewählt werden. In das Formelfenster wird der kopierte Zellinhalt **mit Anführungsstrichen** eingefügt und mit 
-:guilabel:`Gewählte aktualisieren` werden alle ausgewählten Haltungen entsprechend angepasst.
+Markierung der Haltungen für die Flächenerzeugung
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Diese Markierung geschieht über das Attribut "hat RW-Anschlüsse" der Haltungsdaten. 
+Hierfür muss zuerst der Layer "Haltungen" in der Layerkontrolle ausgewählt und der :guilabel:`Bearbeitungsmodus` |Tool_bearbeitungs_modus| aktiviert 
+sein. Nun können die Markierungen bearbeitet werden. Soll eine größere Anzahl Haltungen
+in einem Arbeitsschritt bearbeitet werden, können diese zunächst ausgewählt werden und anschließend mit Hilfe der Bearbeitungsleiste gesetzt (1) oder gelöscht (0) werden (siehe Bild unten). Dazu muss in der 
+Drop-Down-Liste im ersten Feld die Spalte 
+:guilabel:`hat RW-Anschlüsse` gewählt werden. Im Formelfenster wird *0* oder *1* eingetragen und mit :guilabel:`Gewählte 
+aktualisieren` werden alle ausgewählten Haltungen entsprechend 
+angepasst. 
 
 .. image:: ./QKan_Bilder/Flaechen_vorbereiten/liste_gewaehlte_aktualisieren.png 
 
-Nun können die Änderungen gespeichert, der Bearbeitungsmodus ausgeschalten und die Auswahl aufgehoben werden.
+Nun können die Änderungen gespeichert, der Bearbeitungsmodus ausgeschalten und die Auswahl aufgehoben werden. 
 
 .. _linkflaechenaufteilung:
 
 Markierung großer aufzuteilender Flächen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Die Flächen, die markiert werden sollten, sind in der Regel alle Straßenflächen, große unbefestigte Flächen 
-und besonders große Gebäude. Wenn der Layer "Flächen" in der gleichnamigen Gruppe aktiviert wurde, können 
+Im Layer *Einzelflächen* müssen die Flächen, die beim Export in ein Simulationsprogramm mit den gemäß dem vorherigen 
+Kapitel erstellten Haltungsflächen verschnitten werden sollen, im Feld "aufteilen" markiert werden. sollten, Beispiele für solche Flächen sind Straßenflächen, große unbefestigte Flächen und besonders große Gebäude. Wenn der Layer "Flächen" in der gleichnamigen Gruppe aktiviert wurde, können 
 die betroffenen Flächen mit der |Tool_auswahlfunktion| Auswahlfunktion selektiert werden. Auch hier gilt: 
 falls es sich um sehr viele Flächen handelt, können die Bearbeitungsschritte jeweils für eine Teilauswahl 
 wiederholt durchgeführt werden.
@@ -272,7 +255,7 @@ erstellen`. Die Zuordnung sollte anschließend visuell überprüft werden.
 Verbindungslinien bearbeiten
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Gibt es unerwünschte Zuordnungen von Flächen zu Haltungen können diese leicht manuell gelöscht oder verschoben werden. Ist der Layer, auf 
-dem die Verbindungslinien liegen im |Tool_bearbeitungsmodus| :guilabel:`Bearbeitungsmodus`, kann das |Tool_stuetzpunktwerkzeug| 
+dem die Verbindungslinien liegen im |Tool_bearbeitungs_modus| :guilabel:`Bearbeitungsmodus`, kann das |Tool_stuetzpunktwerkzeug| 
 :guilabel:`Stützpunktwerkzeug` ausgewählt werden. Damit die Bearbeitung funktioniert ist es wichtig, dass das 
 |Tool_topologisches_editieren| :guilabel:`topoligisches editieren Werkzeug` deaktiviert ist. Um eine Stützstelle zu ändern, muss nach 
 Aktivierung des |Tool_stuetzpunktwerkzeug| :guilabel:`Stützpunktwerkzeug` die zu bearbeitende Verbindungslinien mit Rechtsklick fixiert 
@@ -281,12 +264,19 @@ Stützstelle mit Linksklick ausgewählt wird. Als nächstes wird die Haltung aus
 sollte. Nach Klick auf die Haltung sollte die geänderte Verbindungslinie auf dem Plan erscheinen. Die Auswahl der Verbindungslinie kann 
 durch einen erneuten Rechtsklick auf die gewählt Linie aufgehoben werden.
 
+.. |Tool_bearbeitungs_modus| image:: ./QKan_Bilder/Tool_bearbeitungsmodus.png
+                             :width: 1.25 em
+
 .. |Tool_stuetzpunktwerkzeug| image:: ./QKan_Bilder/Tool_stuetzpunkt_werkzeug.png
                              :width: 1.25 em
+
 .. |Tool_topologisches_editieren| image:: ./QKan_Bilder/Tool_topologisches_editieren.png
                              :width: 1.25 em
-..
-    Erzeugung von Anbindungen zwischen Einzeleinleitern und Haltungen
-    -----------------------------------------------------------------
+
+
+.. _createlinksw:
+
+Erzeugung von Anbindungen zwischen Einzeleinleitern und Haltungen
+-----------------------------------------------------------------
 
     (Dieses Kapitel muss noch erstellt werden)

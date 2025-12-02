@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QKan-Tabellen &mdash; QKan 3.3.1 Dokumentation</title>
+  <title>QKan-Tabellen &mdash; QKan 3.4.8 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="prev" title="Flächenverarbeitung" href="QKan_Flaechenverarbeitung.html" /> 
+    <link rel="prev" title="Ueberflutung" href="QKan_Ueberflutung.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,7 +37,7 @@
             QKan
           </a>
               <div class="version">
-                3.2
+                3.4.8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -58,12 +58,13 @@
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Synchronisation von QKan-Projekten</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul class="current">
@@ -94,6 +95,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 </ul>
 
         </div>
@@ -150,7 +152,7 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>haltnam</p></td>
-<td><p>Name</p></td>
+<td><p>Bezeichnung</p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -219,7 +221,17 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>sohleoben</p></td>
+<tr class="row-odd"><td><p>ausendurchmesser</p></td>
+<td><p>Außendurchmesser</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>sohleoben</p></td>
 <td><p>Sohlhöhe Anfang</p></td>
 <td><p>(n. v.)</p></td>
 <td><p>(n. v.)</p></td>
@@ -229,7 +241,7 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>sohleunten</p></td>
+<tr class="row-odd"><td><p>sohleunten</p></td>
 <td><p>Sohlhöhe Ende</p></td>
 <td><p>(n. v.)</p></td>
 <td><p>(n. v.)</p></td>
@@ -239,7 +251,7 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -249,11 +261,41 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>teilgebiet</p></td>
+<tr class="row-odd"><td><p>baujahr</p></td>
+<td><p>Baujahr</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>eigentum</p></td>
+<td><p>Eigenümer</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>teilgebiet</p></td>
 <td><p>Teilgebiet</p></td>
 <td></td>
 <td></td>
 <td><p>(n. v.)</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>strasse</p></td>
+<td><p>Straße</p></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -281,6 +323,26 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 </tr>
 <tr class="row-odd"><td><p>material</p></td>
 <td><p>Material</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+</tr>
+<tr class="row-even"><td><p>profilauskleidung</p></td>
+<td><p>Profilauskleidung</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+<td><p>(n. v.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>innenmaterial</p></td>
+<td><p>Innenmaterial</p></td>
 <td><p>(n. v.)</p></td>
 <td><p>(n. v.)</p></td>
 <td><p>(n. v.)</p></td>
@@ -339,6 +401,26 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 <td></td>
 <td></td>
 </tr>
+<tr class="row-odd"><td><p>rwanschluss</p></td>
+<td><p>hat RW Anschluss</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>druckdicht</p></td>
+<td><p>Druckdicht</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 <tr class="row-odd"><td><p>kommentar</p></td>
 <td><p>Kommentar</p></td>
 <td></td>
@@ -360,7 +442,7 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>xschob</p></td>
-<td><p>x_anf</p></td>
+<td><p>x Anfang</p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -370,7 +452,7 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>yschob</p></td>
-<td><p>y_anf</p></td>
+<td><p>y Anfang</p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -380,7 +462,7 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>xschun</p></td>
-<td><p>x_end</p></td>
+<td><p>x Ende</p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -390,7 +472,7 @@ einem Kanalnetz mit den jeweils angepassten Attributinhalten dargestellt.</p>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>yschun</p></td>
-<td><p>y_end</p></td>
+<td><p>y Ende</p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -513,13 +595,13 @@ im Entwässerungsnetz darstellen, z. B. Speicher oder Auslässe (nur in QKan)</p
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="QKan_Flaechenverarbeitung.html" class="btn btn-neutral float-left" title="Flächenverarbeitung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="QKan_Ueberflutung.html" class="btn btn-neutral float-left" title="Ueberflutung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2017 - 2022, Hoettges.</p>
+    <p>&#169; Copyright 2017 - 2025, Hoettges.</p>
   </div>
 
   Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
