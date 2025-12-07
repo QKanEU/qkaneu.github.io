@@ -53,6 +53,7 @@
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fehler-beim-update">Fehler beim Update</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fehlerhafte-anzeige-linienelemente">Fehlerhafte Anzeige Linienelemente</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fehlerhafte-anzeige-qkan-formulare">Fehlerhafte Anzeige QKan Formulare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#objektabfrage-funktioniert-nicht">Objektabfrage funktioniert nicht</a></li>
@@ -105,6 +106,16 @@
              
   <section id="faq">
 <h1>FAQ<a class="headerlink" href="#faq" title="Link to this heading"></a></h1>
+<section id="fehler-beim-update">
+<h2>Fehler beim Update<a class="headerlink" href="#fehler-beim-update" title="Link to this heading"></a></h2>
+<p><strong>Problem:</strong> Beim Update auf QKan Version 3.4.8 erscheint ein Fenster mit der Fehlermeldung „Konnte Erweiterung ‚qkan‘ nicht laden …“.</p>
+<img alt="_images/faq_updatefehler_348.png" src="_images/faq_updatefehler_348.png" />
+<p><strong>Erläuterung:</strong> Der Grund ist ein Programmierfehler in der vorherigen Version, wodurch diese nicht vollständig deinstalliert werden kann.</p>
+<p><strong>Lösung:</strong> Löschen Sie das vorherige Plugin manuell. Den Speicherort für das Plugin finden Sie über das
+Menü <span class="guilabel">Einstellungen</span> <span class="guilabel">Benutzerprofile</span> <span class="guilabel">Aktuelles Profilverzeichnis öffnen</span>, wenn Sie in den Unterordner
+<em>python/plugins</em> wechseln. Hier müssen Sie nur den Ordner <em>qkan</em> löschen und anschließend QGIS beenden und anschließend neu starten. Jetzt
+können Sie QKan wie gewohnt neu installieren.</p>
+</section>
 <section id="fehlerhafte-anzeige-linienelemente">
 <h2>Fehlerhafte Anzeige Linienelemente<a class="headerlink" href="#fehlerhafte-anzeige-linienelemente" title="Link to this heading"></a></h2>
 <p><strong>Problem:</strong> Symbole auf Haltungen und Verbindungselementen (Pumpen, Wehre, etc.) wiederholen sich in viel zu engem Abstand</p>
@@ -131,7 +142,7 @@ angeordneten Feldern anstelle eines QKan-Formulares angezeigt.</p>
 <p><strong>Lösung:</strong> Hierfür gibt es zwei mögliche Ursachen, welche auch beide zusammen vorliegen können:</p>
 <p>1. Die Projektdatei wurde (in der Regel zusammen mit der eingebundenen QKan-Datenbank) in ein anderes Verzeichnis verschoben. Ist dies der Fall,
 kann im Menü unter <span class="guilabel">QKan</span> unter dem Punkt <span class="guilabel">Allgemein</span> mit <a class="reference internal" href="_images/Tool_projekt_aktualisieren.png"><img alt="Tool_projekt_aktualisieren" src="_images/Tool_projekt_aktualisieren.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Projekt aktualisieren</span>
-der Pfad wieder hergestellt werden. Dazu muss in dem sich öffnenden Fesnter das Kontrollfeld im Bereich „Layer anpassen &gt; Formularanbindung auf
+der Pfad wieder hergestellt werden. Dazu muss in dem sich öffnenden Fenster das Kontrollfeld im Bereich „Layer anpassen &gt; Formularanbindung auf
 QKan-Standard setzten“ sowie das Optionsfeld im Bereich „QKan-Layer &gt; alle anpassen“ aktiviert werden (siehe Bild unten).</p>
 <img alt="_images/formularpfade_wiederherstellen.png" src="_images/formularpfade_wiederherstellen.png" />
 <p>2. Der Modus für die Anzeige von Objektinformationen wurde noch nicht umgestellt. Eine Anleitung für die richtige Einstellung ist

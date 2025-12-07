@@ -46,14 +46,16 @@ Die Auswahl der beiden Verzeichnisse für Bilder und Videos dient dazu, deren Sp
 Start des Importes
 ++++++++++++++++++
 
-Wenn in der zu importierenden Datei individuelle Knotentypen abweichend vom M150-Standard (Referenztabelle Nr. 116 "Knotenart" gemäß DWA-M 150) 
-enthalten sind, muss wegen der abweichenden Interpretation von Sonderbauwerken in QKan gegenüber der DWA-Richtlinie eine Zuordnung zu 
-der Knotenarten zu den Schachttypen in QKan vorgenommen werden. 
+Wenn in der zu importierenden Datei individuelle Knotentypen abweichend vom M150-Standard (Referenztabelle Nr. 
+116 "Knotenart" gemäß DWA-M 150) enthalten sind, muss wegen der abweichenden Interpretation von Sonderbauwerken 
+in QKan gegenüber der DWA-Richtlinie eine Zuordnung zu der Knotenarten zu den Schachttypen in QKan vorgenommen 
+werden. 
 
 .. image:: ./QKan_Bilder/M150_Knotenarten.png
 
-Der Dateiimport zeigt die entsprechende Tabelle an, damit nach Aktivierung des Bearbeitungsmodus der Anwender die Spalte *QKan-Schachttyp* 
-entsprechend bearbeitet. Solange diese Zuordnung nicht vollständig ist, wird statt des Datenimportes jedes Mal diese Tabelle angezeigt. 
+Der Dateiimport zeigt die entsprechende Tabelle an, damit nach Aktivierung des Bearbeitungsmodus der Anwender 
+die Spalte *QKan-Schachttyp* entsprechend bearbeitet. Solange diese Zuordnung nicht vollständig ist, wird 
+statt des Datenimportes jedes Mal diese Tabelle angezeigt. 
 
 Ausführliche Erläuterungen zu dieser Funktion finden Sie im Kapitel :ref:`DWA-M 150 <dwa-m-150>`
 
@@ -83,8 +85,8 @@ Das Kontrollkästchen :guilabel:`Fehlende Profil- und Entwässerungsart zulassen
 Datensätze exportiert werden, bei denen die Attribute *Profil* und *Entwässerungsart* in den Tabellen 
 *Schächte* und *Haltungen* keine gültigen Werte haben. 
 
-Die Schaltfläche :guilabel: `M150-Kürzel anzeigen` legt falls noch nicht vorhanden einen Layer 
-*M150 Kürzel zu ergänzen* und öffnet diesen. Er dient zur Kontrolle der Referenztabelle und zeigt rot 
+Die Schaltfläche :guilabel: `M150-Kürzel anzeigen` legt, falls noch nicht vorhanden, einen Layer 
+*M150 Kürzel zu ergänzen* in der Gruppe *M 150* an und öffnet diesen. Er dient zur Kontrolle der Referenztabelle und zeigt rot 
 hinterlegt die Datensätze an, bei denen in der Spalte *Kürzel* der Eintrag gemäß DWA-M 150 ergänzt 
 werden muss. Es wird empfohlen, nach Änderungen in dieser Tabelle eine der beiden Kontrollkästchen 
 anzuklicken, um die Anzeige der berücksichtigten Schächte und Haltungen zu aktualisieren. 
