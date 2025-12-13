@@ -12,7 +12,7 @@ Fehler beim Update
 
 **Lösung:** Löschen Sie das vorherige Plugin manuell. Den Speicherort für das Plugin finden Sie über das 
 Menü :guilabel:`Einstellungen` :guilabel:`Benutzerprofile` :guilabel:`Aktuelles Profilverzeichnis öffnen`, wenn Sie in den Unterordner 
-*python/plugins* wechseln. Hier müssen Sie nur den Ordner *qkan* löschen und anschließend QGIS beenden und anschließend neu starten. Jetzt 
+*python/plugins* wechseln. Hier müssen Sie nur den Ordner *qkan* löschen und anschließend QGIS beenden und neu starten. Jetzt 
 können Sie QKan wie gewohnt neu installieren.
 
 
