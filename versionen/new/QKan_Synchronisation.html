@@ -107,14 +107,23 @@
 <li><p>Im Rahmen einer TV-Untersuchung wurde ein QKan-Projekt erstellt, dessen Daten in ein QKan-Bestandsprojekt
 übernommen werden sollen.</p></li>
 <li><p>Es existieren zwei Versionen eines QKan-Projektes, aus denen wieder eine Version erstellt werden soll</p></li>
+<li><p>Mehrere Teilnetze sollen zusammengeführt werden.</p></li>
 </ul>
 </div></blockquote>
 <p>Das grundsätzliche Vorgehen bei der Synchronisation von QKan-Projekten ist wie folgt:</p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Das aktuell geladene Projekt wird mit einem ausgewählten <em>externen Projekt</em> mit der
 Funktion <a class="reference internal" href="_images/Tool_Abgleich.png"><img alt="Tool_Abgleich" src="_images/Tool_Abgleich.png" style="width: 1.25em;" /></a> <span class="guilabel">Vergleich mit einem anderen QKan-Projekt</span> verglichen. Datei wird für
-jede QKan-Tabelle eine Synchronisationstabelle erstellt, in der der Anwender festgelegt kann, welche
-der möglichen Maßnahmen (ändern, hinzufügen, löschen) auch tatsächlich ausgeführt werden sollen.</p></li>
+jede QKan-Tabelle eine Synchronisationstabelle erstellt, in der individuell festgelegt kann, welche
+der möglichen Maßnahmen (ändern, hinzufügen, löschen) auch tatsächlich ausgeführt werden sollen. Dazu muss
+in der ersten Spalte „ausführen“ eine „1“ stehen. Zum Ändern muss der Bearbeitungsmodus mit dem Icon
+<a href="#id1"><span class="problematic" id="id2">|Tool_bearbeitungsmodus|</span></a> aktiviert werden. Bei der Bearbeitung des Feldes erscheint anstelle der Zahl
+ein Kontrollfeld. Wie in der nachfolgenden Grafik beispielhaft zu sehen, sind aktive Änderungen farbig
+hinterlegt (grün: hinzufügen, orange: ändern, rot: löschen), während deaktivierte Änderungen durchgestrichen
+sind und nur die Textfarbe entsprechend ist.</p>
+<p>Violett hinterlegte Datensätze zeigen dagegen Bezeichnungen an, die entweder in der externen oder der
+Bestandsdatenbank mehrfach vorkommen. Diese werden bei der anschließenden Synchronisation nicht berücksichtigt.</p>
+</li>
 </ol>
 <img alt="_images/tabelle_sync.png" src="_images/tabelle_sync.png" />
 <ol class="arabic simple">
