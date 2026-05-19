@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Allgemein &mdash; QKan 3.4.8 Dokumentation</title>
+  <title>Allgemein &mdash; QKan 3.4.10 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -23,7 +23,7 @@
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
     <link rel="next" title="Synchronisation" href="QKan_Synchro.html" />
-    <link rel="prev" title="Formulare" href="QKan_Formulare.html" /> 
+    <link rel="prev" title="Dialogfenster" href="QKan_Formulare.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.4.8
+                3.4.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,27 +52,27 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ und Fehler</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">QKan am Beispiel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Synchronisation von QKan-Projekten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="QKan_Formulare.html">Formulare</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Allgemein</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#optionen">Optionen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#qkan-projekt-aktualisieren">QKan-Projekt aktualisieren</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#qkan-projekt-anpassen">QKan-Projekt anpassen</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#auswahl-der-vorlage">Auswahl der Vorlage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#layer-anpassen">Layer anpassen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#qkan-layer">QKan-Layer</a></li>
@@ -93,9 +93,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#einstellungen">Einstellungen</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#haltungsberichte">Haltungsberichte</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Funktionsweise</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Hystem_Extran.html">Hystem-Extran</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_M150.html">Datenaustausch mit DWA-M 150</a></li>
@@ -129,7 +133,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="QKan_Formulare.html">Formulare</a></li>
+          <li class="breadcrumb-item"><a href="QKan_Formulare.html">Dialogfenster</a></li>
       <li class="breadcrumb-item active">Allgemein</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/QKan_Formulare_Allgemein.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
@@ -171,9 +175,9 @@ Durch die Änderung der Standardwerte lässt sich eine bessere Lesbarkeit und Ü
 <p>Im dritten Reiter Automatische Datenübernahme werden die Trigger verwaltet die bei dem neuanlegen von Haltungen und Schächten genutzt werden können.</p>
 <img alt="_images/optionen3.png" src="_images/optionen3.png" />
 </section>
-<section id="qkan-projekt-aktualisieren">
-<span id="projektdatei-anpassen"></span><span id="index-0"></span><h2>QKan-Projekt aktualisieren<a class="headerlink" href="#qkan-projekt-aktualisieren" title="Link to this heading"></a></h2>
-<p>Mit der Funktion <a class="reference internal" href="_images/Tool_projekt_aktualisieren.png"><img alt="Tool_projekt_aktualisieren" src="_images/Tool_projekt_aktualisieren.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Projekt aktualisieren</span> können Projekte, die noch auf einer älteren QKan-Version basieren, auf den aktuellsten Stand gebracht werden.
+<section id="qkan-projekt-anpassen">
+<h2>QKan-Projekt anpassen<a class="headerlink" href="#qkan-projekt-anpassen" title="Link to this heading"></a></h2>
+<p>Mit der Funktion <a class="reference internal" href="_images/Tool_projekt_aktualisieren.png"><img alt="Tool_projekt_aktualisieren" src="_images/Tool_projekt_aktualisieren.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Projekt anpassen</span> können Projekte, die noch auf einer älteren QKan-Version basieren, auf den aktuellsten Stand gebracht werden.
 Dabei werden die vorhandenen QKan-Layer in Ihrer Darstellung auf den aktuellen Standart gebracht. Layer die außerhalb von QKan in dem QGIS Projekt enthalten sind, werden nciht verändert.</p>
 <p>Unter der Überschrift „Layer anpassen“ kann die QKan-Datenbank gewählt werden. Des Weiteren kann das Projektionssystem der Layer anhand der Datenbank aktualisiert werden.
 Weiterhin ist es empfehlenswert, unter der gleichen Punkt auch die Option „Formularanbindungen auf QKan-Standard setzen“ zu aktivieren.</p>
@@ -199,16 +203,15 @@ der Regel aktiviert werden.</p>
 </section>
 </section>
 <section id="projektdatei-auf-andere-datenbank-ubertragen">
-<span id="projektdatei-ubertragen"></span><span id="index-1"></span><h2>Projektdatei auf andere Datenbank übertragen<a class="headerlink" href="#projektdatei-auf-andere-datenbank-ubertragen" title="Link to this heading"></a></h2>
+<span id="index-0"></span><h2>Projektdatei auf andere Datenbank übertragen<a class="headerlink" href="#projektdatei-auf-andere-datenbank-ubertragen" title="Link to this heading"></a></h2>
 <p>Oft entstehen nach einiger Zeit komplexe Projektdateien, die besondere Layerdarstellungen enthalten und quasi „Firmenstandards“ darstellen.
-Solch eine Projektdatei kann mit der Funktion <a class="reference internal" href="_images/Tool_projektdatei_uebertragen.png"><img alt="Tool_projektdatei_uebertragen" src="_images/Tool_projektdatei_uebertragen.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Projektdatei übertragen</span> folgendermaßen auf
+Solch eine Projektdatei kann mit der Funktion <a class="reference internal" href="_images/Tool_projektdatei_uebertragen.png"><img alt="Tool_projektdatei_uebertragen" src="_images/Tool_projektdatei_uebertragen.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Projektdatei übernehmen</span> folgendermaßen auf
 ein anderes Projekt übertragen werden:</p>
 <img alt="_images/qkan_qgsAdapt.png" id="image-qkan-qgsadapt" src="_images/qkan_qgsAdapt.png" />
 <section id="qkan-datenbank">
 <h3>QKan-Datenbank<a class="headerlink" href="#qkan-datenbank" title="Link to this heading"></a></h3>
 <p>Hier wird die einzubindende QKan-Datenbank gewählt.
-Um sicherzustellen, dass die Datenbank auf dem aktuellsten Stand ist, kann die Option
-„QKan Datenbank aktualisieren“ gewählt werden.</p>
+Um sicherzustellen, dass die Datenbank auf dem aktuellsten Stand ist, kann die Option „QKan Datenbank aktualisier“ gewählt werden.</p>
 </section>
 <section id="projektdatei-als-vorlage">
 <h3>Projektdatei als Vorlage<a class="headerlink" href="#projektdatei-als-vorlage" title="Link to this heading"></a></h3>
@@ -221,22 +224,15 @@ Projektdatei vorhanden, kann auch die QKan-Standardvorlage gewählt werden.</p>
 </section>
 </section>
 <section id="datenbank-aktualisieren">
-<span id="index-2"></span><h2>Datenbank aktualisieren<a class="headerlink" href="#datenbank-aktualisieren" title="Link to this heading"></a></h2>
+<span id="index-1"></span><h2>Datenbank aktualisieren<a class="headerlink" href="#datenbank-aktualisieren" title="Link to this heading"></a></h2>
 <p>Mit der Funktion <a class="reference internal" href="_images/Tool_db_aktualisieren.png"><img alt="Tool_db_aktualisieren" src="_images/Tool_db_aktualisieren.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Datenbank aktualisieren</span> kann die QKan Datenbank sowie die
-Projektdatei auf die aktuelle Version aktualisiert werden. Dabei kann mit der Auswahl unter dem Verzeichnis
-eine Sicherheitskopie erstellt werden. Diese stellt sicher, dass das orginalprojekt bei einem fehlerhaften
-Update versuch wieder hergestellt werden kann.</p>
+Projektdatei auf die aktuelle Version aktualisiert werden. Dabei kann mit der auswahl unter dem Verzeichnis
+eine Sicherheitskopie erstellt werden. Diese stellt sicher, dass das orginal Projekt bei einem fehlerhaften
+Update versuch nicht verloren ist.</p>
 <img alt="_images/qkan_layersadapt.png" src="_images/qkan_layersadapt.png" />
-<p>Bei der Aktualisierung lässt es sich in einigen Fällen nicht vermeiden, dass die Layer nicht ordnungsgemäß
-angepasst wurden, insbesondere, wenn das QKan-Projekt gegenüber der ursprünglichen Version stark angepasst
-wurde. Das gilt insbesondere für das Update auf Version 3.4.8. In diesem Fall ist es empfehlenswert,
-zunächst das Projekt mit der
-Funktion <a class="reference internal" href="#projektdatei-ubertragen"><span class="std std-ref">Projektdatei auf andere Datenbank übertragen</span></a>
-zu aktualisieren und anschließend aus dem gesicherten Projekt, das dazu parallel geöffnet wird, die
-zusätzlichen Layer in das neue Projekt zu kopieren.</p>
 </section>
 <section id="neue-datenbank-erstellen">
-<span id="index-3"></span><h2>Neue Datenbank erstellen<a class="headerlink" href="#neue-datenbank-erstellen" title="Link to this heading"></a></h2>
+<span id="index-2"></span><h2>Neue Datenbank erstellen<a class="headerlink" href="#neue-datenbank-erstellen" title="Link to this heading"></a></h2>
 <p>Mit dem Tool <a class="reference internal" href="_images/Tool_datenbank_erstellen.png"><img alt="Tool_db_erstellen" src="_images/Tool_datenbank_erstellen.png" style="width: 1.25em;" /></a> <span class="guilabel">Neue Datenbank anlegen</span> kann eine leere QKan-Datenbank erstellt werden,
 die als Grundlage für ein neues Projekt dient.</p>
 <img alt="_images/db_anlegen.png" src="_images/db_anlegen.png" />
@@ -250,7 +246,7 @@ der Erstellung können über die Importfunktionen (z. B. ISYBAU, QKan-XML oder S
 eingelesen werden.</p>
 </section>
 <section id="dateipfade-suchen">
-<span id="index-4"></span><h2>Dateipfade suchen<a class="headerlink" href="#dateipfade-suchen" title="Link to this heading"></a></h2>
+<span id="index-3"></span><h2>Dateipfade suchen<a class="headerlink" href="#dateipfade-suchen" title="Link to this heading"></a></h2>
 <p>Das Tool <span class="guilabel">Dateipfad-Suche</span> dient der automatischen Aktualisierung relativer Dateipfade innerhalb der
 QKan-Datenbank.</p>
 <img alt="_images/dateipfade.png" src="_images/dateipfade.png" />
@@ -275,13 +271,23 @@ Dies ist besonders hilfreich, wenn das gesamte Projektverzeichnis oder die Medie
 oder in eine neue Struktur verschoben wurden.</p>
 </section>
 </section>
+<section id="haltungsberichte">
+<span id="index-4"></span><h2>Haltungsberichte<a class="headerlink" href="#haltungsberichte" title="Link to this heading"></a></h2>
+<p>Das Tool <span class="guilabel">Haltungsberichte</span> dient der automatischen Ausgabe von Haltungsberichten.</p>
+<img alt="_images/haltungsbericht.png" src="_images/haltungsbericht.png" />
+<section id="id1">
+<h3>Funktionsweise<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>Das Tool erstellt automatisiert Haltungsbereichte entweder für den gesamten Datenbestand oder für eine vorher gemachte Selection. Die Haltungsbericht werden einzelnd für jede Haltungen
+als PDF-Datei erstellt und im ausgewählten Speicherort gespeichert.</p>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="QKan_Formulare.html" class="btn btn-neutral float-left" title="Formulare" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="QKan_Formulare.html" class="btn btn-neutral float-left" title="Dialogfenster" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
         <a href="QKan_Synchro.html" class="btn btn-neutral float-right" title="Synchronisation" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

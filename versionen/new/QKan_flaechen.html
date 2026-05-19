@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arbeiten mit Flächen &mdash; QKan 3.4.8 Dokumentation</title>
+  <title>Flächenverarbeitung &mdash; QKan 3.4.10 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="Daten" href="QKan_Daten.html" />
+    <link rel="next" title="Daten: prüfen, auswählen, darstellen" href="QKan_Daten.html" />
     <link rel="prev" title="Datenaustausch" href="QKan_Datenaustausch.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.4.8
+                3.4.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,12 +52,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ und Fehler</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Arbeiten mit Flächen</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flächenverarbeitung</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#verarbeitung-von-befestigten-und-unbefestigten-flachen">Verarbeitung von befestigten und unbefestigten Flächen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#grundprinzip">Grundprinzip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#teilgebiete">Teilgebiete</a><ul>
@@ -78,18 +78,18 @@
 <li class="toctree-l2"><a class="reference internal" href="#erzeugung-von-anbindungen-zwischen-einzeleinleitern-und-haltungen">Erzeugung von Anbindungen zwischen Einzeleinleitern und Haltungen</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">QKan am Beispiel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Synchronisation von QKan-Projekten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Formulare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 </ul>
@@ -108,7 +108,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Arbeiten mit Flächen</li>
+      <li class="breadcrumb-item active">Flächenverarbeitung</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/QKan_flaechen.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -118,8 +118,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="arbeiten-mit-flachen">
-<h1>Arbeiten mit Flächen<a class="headerlink" href="#arbeiten-mit-flachen" title="Link to this heading"></a></h1>
+  <section id="flachenverarbeitung">
+<h1>Flächenverarbeitung<a class="headerlink" href="#flachenverarbeitung" title="Link to this heading"></a></h1>
 <section id="verarbeitung-von-befestigten-und-unbefestigten-flachen">
 <h2>Verarbeitung von befestigten und unbefestigten Flächen<a class="headerlink" href="#verarbeitung-von-befestigten-und-unbefestigten-flachen" title="Link to this heading"></a></h2>
 <p>Abflusswirksame Flächen, z. B. Dachflächen, Parkplätze, Straßen, werden in QKan in der Tabelle „flaechen“ verwaltet.
@@ -304,7 +304,7 @@ durch einen erneuten Rechtsklick auf die gewählt Linie aufgehoben werden.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="QKan_Datenaustausch.html" class="btn btn-neutral float-left" title="Datenaustausch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="QKan_Daten.html" class="btn btn-neutral float-right" title="Daten" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="QKan_Daten.html" class="btn btn-neutral float-right" title="Daten: prüfen, auswählen, darstellen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

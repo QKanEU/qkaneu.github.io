@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formulare &mdash; QKan 3.4.8 Dokumentation</title>
+  <title>Dialogfenster &mdash; QKan 3.4.10 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -23,7 +23,7 @@
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
     <link rel="next" title="Allgemein" href="QKan_Formulare_Allgemein.html" />
-    <link rel="prev" title="Synchronisation von QKan-Projekten" href="QKan_Synchronisation.html" /> 
+    <link rel="prev" title="Vergleich und Synchronisation von QKan-Datenbanken" href="QKan_Synchronisation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.4.8
+                3.4.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,26 +52,26 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ und Fehler</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">QKan am Beispiel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Synchronisation von QKan-Projekten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Formulare</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dialogfenster</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html">Allgemein</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Hystem_Extran.html">Hystem-Extran</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_M150.html">Datenaustausch mit DWA-M 150</a></li>
@@ -108,7 +108,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Formulare</li>
+      <li class="breadcrumb-item active">Dialogfenster</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/QKan_Formulare.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -118,20 +118,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="formulare">
-<h1>Formulare<a class="headerlink" href="#formulare" title="Link to this heading"></a></h1>
+  <section id="dialogfenster">
+<h1>Dialogfenster<a class="headerlink" href="#dialogfenster" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Formulare_Allgemein.html">Allgemein</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html#optionen">Optionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html#qkan-projekt-aktualisieren">QKan-Projekt aktualisieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html#qkan-projekt-anpassen">QKan-Projekt anpassen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html#projektdatei-auf-andere-datenbank-ubertragen">Projektdatei auf andere Datenbank übertragen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html#datenbank-aktualisieren">Datenbank aktualisieren</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html#neue-datenbank-erstellen">Neue Datenbank erstellen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html#dateipfade-suchen">Dateipfade suchen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html#haltungsberichte">Haltungsberichte</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html#plausibilitatsprufung">Plausibilitätsprüfung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html#auswahl-erweitern-netzverfolgung">Auswahl erweitern / Netzverfolgung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html#langsschnitt">Längsschnitt</a></li>
@@ -228,7 +229,7 @@ in der Auswahltabelle angeklickt wird, wird die Auswahl automatisch aktiviert</p
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="QKan_Synchronisation.html" class="btn btn-neutral float-left" title="Synchronisation von QKan-Projekten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="QKan_Synchronisation.html" class="btn btn-neutral float-left" title="Vergleich und Synchronisation von QKan-Datenbanken" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
         <a href="QKan_Formulare_Allgemein.html" class="btn btn-neutral float-right" title="Allgemein" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

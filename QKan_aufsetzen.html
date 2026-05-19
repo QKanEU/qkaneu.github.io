@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; QKan 3.4.8 Dokumentation</title>
+  <title>Installation &mdash; QKan 3.4.10 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="FAQ" href="QKan_faq.html" />
+    <link rel="next" title="FAQ und Fehler" href="QKan_faq.html" />
     <link rel="prev" title="Was ist QKan?" href="QKan_allgemein.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.4.8
+                3.4.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,9 +52,9 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#qgis-installieren">QGIS Installieren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qgis-installation">QGIS Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#qkan-plugin-installation">QKan-Plugin Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#grundlegende-einstellungen-fur-qkan">Grundlegende Einstellungen für QKan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wichtige-grundeinstellungen">Wichtige Grundeinstellungen</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#makros">Makros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#objektinformationen">Objektinformationen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#grafik">Grafik</a></li>
@@ -62,24 +62,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ und Fehler</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">QKan am Beispiel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Synchronisation von QKan-Projekten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Formulare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 </ul>
@@ -118,8 +118,8 @@ Zunächst aber noch eine grundlegende Anmerkung: QKan besteht aus einem Plugin, 
 vielfältige Funktionen zur Kanaldatenverwaltung erweitert wird. Ausschließlich für die Verwendung im Zusammenhang mit dem
 Simulationsprogramms HYSTEM-EXTRAN 7.x wird ein zweites Plugin benötigt, das aber noch zusätzlich weitere Installationen
 notwendig macht. Dies hängt damit zusammen, dass HYSTEM-EXTRAN 7.x eine Firebird-Datenbank verwendet.</p>
-<section id="qgis-installieren">
-<h2>QGIS Installieren<a class="headerlink" href="#qgis-installieren" title="Link to this heading"></a></h2>
+<section id="qgis-installation">
+<h2>QGIS Installation<a class="headerlink" href="#qgis-installation" title="Link to this heading"></a></h2>
 <p>QKan basiert auf dem Open-Source-Programm QGIS 3. Deshalb wird dieses als erstes benötigt.
 Die aktuelle Version von QGIS finden Sie hier: <a class="reference external" href="http://www.QGIS.org/de/site/forusers/download.html">QGIS</a> oder falls dieser Link nicht funktioniert können Sie manuell
 www.QGIS.org aufrufen. Für größere Organisationen ist die sogenannte LTR (long time release) Version empfehlenswert,
@@ -129,21 +129,32 @@ dass Ihnen genügend freier Speicherplatz zur Verfügung steht, da die QGIS-Inst
 Speicherplatz einnehmen wird. Wählen Sie in Abhänigkeit von Ihrem Betriebssystem und Ihrer Betriebssystem-Version einen Downloadlink aus.
 Die nachstehende Abbildung zeigt die „Eigenständige QGIS-Installation Version 3.xx (64bit)“:</p>
 <img alt="_images/QGIS_herunterladen.png" src="_images/QGIS_herunterladen.png" />
-<p>Starten Sie die Installation, akzeptieren das Lizenzabkommen und bestätigen die Installation im Standardverzeichnis „C:\Programme\QGIS 3.xx“. Als letztes werden Sie nach zusätzlichen Komponenten, wie zum Beispiel dem North Carolina Data Set gefragt:</p>
+<p>Starten Sie die Installation, akzeptieren das Lizenzabkommen und bestätigen die Installation im Standardverzeichnis
+„C:\Programme\QGIS 3.xx“. Als letztes werden Sie nach zusätzlichen Komponenten, wie zum Beispiel dem North Carolina Data
+Set gefragt:</p>
 <img alt="_images/QGIS_komponenten.png" src="_images/QGIS_komponenten.png" />
-<p>Es handelt sich um Beispieldaten, die für die Nutzung von QKan nicht benötigt werden. Klicken Sie anschließend auf „Installieren“, um die Installation zu starten. Diese Installation kann einige Minuten in Anspruch nehmen.</p>
+<p>Es handelt sich um Beispieldaten, die für die Nutzung von QKan nicht benötigt werden. Klicken Sie anschließend auf
+„Installieren“, um die Installation zu starten. Diese Installation kann einige Minuten in Anspruch nehmen.</p>
 </section>
 <section id="qkan-plugin-installation">
 <span id="qkan-plugins-fuer-qgis"></span><h2>QKan-Plugin Installation<a class="headerlink" href="#qkan-plugin-installation" title="Link to this heading"></a></h2>
-<p>Nachdem QGIS erfolgreich auf Ihrem System installiert wurde, kann nun das QKan-Plugin installiert werden.
-Dieses kann unter Erweiterungen -&gt; Erweiterungen verwalten und installieren… auf dem Reiter „Alle“ in der Liste der Plug-Ins gefunden werden.
-Wenn es ausgewählt ist, kann es über den Button „Erweiterung installieren“ auf dem Rechner installiert werden.
-Es sollte darauf geachtet werden, dass immer mit der aktuellsten Version gearbeitet wird.
-Installationen von weiteren Plugins für den Export nach HYSTEM-EXTRAN sind nun nicht mehr nötig.</p>
-<img alt="_images/QKan_Plugin.png" src="_images/QKan_Plugin.png" />
+<p>Nachdem QGIS erfolgreich auf Ihrem System installiert wurde, kann nun das QKan-Plugin installiert werden.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Aktuell muss QKan hier <a href="https://fh-aachen.sciebo.de/s/QfaTY49TBpLsGgy" target="_blank">hier</a> heruntergeladen werden.</p>
+</div>
+<p>Seit kurzem werden QGIS-Plugins, die über das Menü <span class="guilabel">Erweiterungen verwalten und installieren…</span> installiert
+werden können, einem Sicherheitscheck unterzogen, die sicherstellen sollen, dass keine
+Hacker-Angriffe über manipuliterte Daten ausgeführt werden können. QKan muss, um diese neuen Anforderungen zu erfüllen, an
+einigen Stellen angepasst werden, was einige Wochen (Stand Mitte Mai 2026) erfordern wird. Bis dahin stehen die neueste und
+die letzten Versionen zum Download hier <a href="https://fh-aachen.sciebo.de/s/QfaTY49TBpLsGgy" target="_blank">hier</a> zur Verfügung.</p>
+<p>Das heruntergeladene ZIP-Archiv kann unter Erweiterungen -&gt; Erweiterungen verwalten und installieren… auf dem
+Reiter „Aus ZIP installieren“ auf dem Rechner installiert werden.
+Es sollte darauf geachtet werden, dass immer mit der aktuellsten Version gearbeitet wird.</p>
+<img alt="_images/QKan_Plugin_ZIP.png" src="_images/QKan_Plugin_ZIP.png" />
 </section>
-<section id="grundlegende-einstellungen-fur-qkan">
-<h2>Grundlegende Einstellungen für QKan<a class="headerlink" href="#grundlegende-einstellungen-fur-qkan" title="Link to this heading"></a></h2>
+<section id="wichtige-grundeinstellungen">
+<h2>Wichtige Grundeinstellungen<a class="headerlink" href="#wichtige-grundeinstellungen" title="Link to this heading"></a></h2>
 <section id="makros">
 <h3>Makros<a class="headerlink" href="#makros" title="Link to this heading"></a></h3>
 <p>Damit alle Funktionen in QKan richtig laufen, ist es wichtig, dass die Makros immer aktiviert sind. Diese Einstellung kann über <span class="guilabel">Einstellungen</span> &gt;
@@ -187,7 +198,7 @@ hinzugefügt werden.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="QKan_allgemein.html" class="btn btn-neutral float-left" title="Was ist QKan?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="QKan_faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="QKan_faq.html" class="btn btn-neutral float-right" title="FAQ und Fehler" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

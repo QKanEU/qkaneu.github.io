@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Synchronisation von QKan-Projekten &mdash; QKan 3.4.8 Dokumentation</title>
+  <title>Vergleich und Synchronisation von QKan-Datenbanken &mdash; QKan 3.4.10 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="Formulare" href="QKan_Formulare.html" />
+    <link rel="next" title="Dialogfenster" href="QKan_Formulare.html" />
     <link rel="prev" title="SubKanS" href="QKan_Substanzklassifizierung.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.4.8
+                3.4.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,24 +52,24 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ und Fehler</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">QKan am Beispiel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Synchronisation von QKan-Projekten</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Formulare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 </ul>
@@ -88,7 +88,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Synchronisation von QKan-Projekten</li>
+      <li class="breadcrumb-item active">Vergleich und Synchronisation von QKan-Datenbanken</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/QKan_Synchronisation.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -98,8 +98,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="synchronisation-von-qkan-projekten">
-<h1>Synchronisation von QKan-Projekten<a class="headerlink" href="#synchronisation-von-qkan-projekten" title="Link to this heading"></a></h1>
+  <section id="vergleich-und-synchronisation-von-qkan-datenbanken">
+<h1>Vergleich und Synchronisation von QKan-Datenbanken<a class="headerlink" href="#vergleich-und-synchronisation-von-qkan-datenbanken" title="Link to this heading"></a></h1>
 <p>Es gibt in der Praxis mehrere Fälle, in denen ein Vergleich zwischen zwei QKan-Projekten sinnvoll ist:</p>
 <blockquote>
 <div><ul class="simple">
@@ -107,14 +107,23 @@
 <li><p>Im Rahmen einer TV-Untersuchung wurde ein QKan-Projekt erstellt, dessen Daten in ein QKan-Bestandsprojekt
 übernommen werden sollen.</p></li>
 <li><p>Es existieren zwei Versionen eines QKan-Projektes, aus denen wieder eine Version erstellt werden soll</p></li>
+<li><p>Mehrere Teilnetze sollen zusammengeführt werden.</p></li>
 </ul>
 </div></blockquote>
 <p>Das grundsätzliche Vorgehen bei der Synchronisation von QKan-Projekten ist wie folgt:</p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Das aktuell geladene Projekt wird mit einem ausgewählten <em>externen Projekt</em> mit der
-Funktion <a class="reference internal" href="_images/Tool_Abgleich.png"><img alt="Tool_Abgleich" src="_images/Tool_Abgleich.png" style="width: 1.25em;" /></a> <span class="guilabel">Vergleich mit einem anderen QKan-Projekt</span> verglichen. Datei wird für
-jede QKan-Tabelle eine Synchronisationstabelle erstellt, in der der Anwender festgelegt kann, welche
-der möglichen Maßnahmen (ändern, hinzufügen, löschen) auch tatsächlich ausgeführt werden sollen.</p></li>
+Funktion <a class="reference internal" href="_images/Tool_bearbeitungsmodus.png"><img alt="Tool_Bearbeitungsmodus" src="_images/Tool_bearbeitungsmodus.png" style="width: 1.25em;" /></a> <span class="guilabel">Vergleich mit einem anderen QKan-Projekt</span> verglichen. Datei wird für
+jede QKan-Tabelle eine Synchronisationstabelle erstellt, in der individuell festgelegt kann, welche
+der möglichen Maßnahmen (ändern, hinzufügen, löschen) auch tatsächlich ausgeführt werden sollen. Dazu muss
+in der ersten Spalte „ausführen“ eine „1“ stehen. Zum Ändern muss der Bearbeitungsmodus mit dem
+Icon <a class="reference internal" href="_images/Tool_Abgleich.png"><img alt="Tool_Abgleich" src="_images/Tool_Abgleich.png" style="width: 1.25em;" /></a>: guilabel:<cite>Bearbeitungsmodus</cite> aktiviert werden. Bei der Bearbeitung des Feldes erscheint anstelle der Zahl
+ein Kontrollfeld. Wie in der nachfolgenden Grafik beispielhaft zu sehen, sind aktive Änderungen farbig
+hinterlegt (grün: hinzufügen, orange: ändern, rot: löschen), während deaktivierte Änderungen durchgestrichen
+sind und nur die Textfarbe entsprechend ist.</p>
+<p>Violett hinterlegte Datensätze zeigen dagegen Bezeichnungen an, die entweder in der externen oder der
+Bestandsdatenbank mehrfach vorkommen. Diese werden bei der anschließenden Synchronisation nicht berücksichtigt.</p>
+</li>
 </ol>
 <img alt="_images/tabelle_sync.png" src="_images/tabelle_sync.png" />
 <ol class="arabic simple">
@@ -127,7 +136,7 @@ der möglichen Maßnahmen (ändern, hinzufügen, löschen) auch tatsächlich aus
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="QKan_Substanzklassifizierung.html" class="btn btn-neutral float-left" title="SubKanS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="QKan_Formulare.html" class="btn btn-neutral float-right" title="Formulare" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="QKan_Formulare.html" class="btn btn-neutral float-right" title="Dialogfenster" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
