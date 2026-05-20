@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vergleich und Synchronisation von QKan-Datenbanken &mdash; QKan 3.4.10 Dokumentation</title>
+  <title>Vergleich und Synchronisation von QKan-Datenbanken &mdash; QKan 3.4.11 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="Dialogfenster" href="QKan_Formulare.html" />
-    <link rel="prev" title="SubKanS" href="QKan_Substanzklassifizierung.html" /> 
+    <link rel="next" title="Einführung zum Beispiel 1 „Workflow“" href="QKan_workflow.html" />
+    <link rel="prev" title="Substanzklassifizierung - SubKanS" href="QKan_Substanzklassifizierung.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.4.10
+                3.4.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,19 +59,28 @@
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">QKan am Beispiel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">Substanzklassifizierung - SubKanS</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Beispiele</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Einführung zum Beispiel 1 „Workflow“</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#import-von-flachendaten">Import von Flächendaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#erzeugung-unbefestigter-flachen">Erzeugung unbefestigter Flächen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#vorbereitung-zur-flachenzuordnung">Vorbereitung zur Flächenzuordnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#flachen-mit-haltungen-verknupfen">Flächen mit Haltungen verknüpfen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#export-nach-hystem-extran">Export nach HYSTEM-EXTRAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#ubersicht-videoanleitungen-zum-workflow">Übersicht: Videoanleitungen zum Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#beispiel-2-datenvorbereitung-fur-simulationsrechnung-hystem-extran">Beispiel 2: Datenvorbereitung für Simulationsrechnung (HYSTEM-EXTRAN)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 </ul>
 
         </div>
@@ -117,7 +126,7 @@ Funktion <a class="reference internal" href="_images/Tool_bearbeitungsmodus.png"
 jede QKan-Tabelle eine Synchronisationstabelle erstellt, in der individuell festgelegt kann, welche
 der möglichen Maßnahmen (ändern, hinzufügen, löschen) auch tatsächlich ausgeführt werden sollen. Dazu muss
 in der ersten Spalte „ausführen“ eine „1“ stehen. Zum Ändern muss der Bearbeitungsmodus mit dem
-Icon <a class="reference internal" href="_images/Tool_Abgleich.png"><img alt="Tool_Abgleich" src="_images/Tool_Abgleich.png" style="width: 1.25em;" /></a>: guilabel:<cite>Bearbeitungsmodus</cite> aktiviert werden. Bei der Bearbeitung des Feldes erscheint anstelle der Zahl
+Icon <a class="reference internal" href="_images/Tool_Abgleich.png"><img alt="Tool_Abgleich" src="_images/Tool_Abgleich.png" style="width: 1.25em;" /></a><span class="guilabel">Bearbeitungsmodus</span> aktiviert werden. Bei der Bearbeitung des Feldes erscheint anstelle der Zahl
 ein Kontrollfeld. Wie in der nachfolgenden Grafik beispielhaft zu sehen, sind aktive Änderungen farbig
 hinterlegt (grün: hinzufügen, orange: ändern, rot: löschen), während deaktivierte Änderungen durchgestrichen
 sind und nur die Textfarbe entsprechend ist.</p>
@@ -126,17 +135,16 @@ Bestandsdatenbank mehrfach vorkommen. Diese werden bei der anschließenden Synch
 </li>
 </ol>
 <img alt="_images/tabelle_sync.png" src="_images/tabelle_sync.png" />
-<ol class="arabic simple">
-<li><p>Die eigentliche Synchronisation erfolgt mit der Funktion <a class="reference internal" href="_images/Tool_Sync.png"><img alt="Tool_Sync" src="_images/Tool_Sync.png" style="width: 1.25em;" /></a> <span class="guilabel">Synchronisation mit einem anderen QKan-Projekt</span></p></li>
-</ol>
+<p>#. Die eigentliche Synchronisation erfolgt mit der Funktion <a class="reference internal" href="_images/Tool_Sync.png"><img alt="Tool_Sync" src="_images/Tool_Sync.png" style="width: 1.25em;" /></a> <span class="guilabel">Synchronisation mit einem anderen QKan-Projekt</span>.
+Falls dabei auch Datensätze gelöscht werden sollen, muss dies zur Sicherheit extra mit dem entsprechenden Kontrollfeld bestätigt werden.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="QKan_Substanzklassifizierung.html" class="btn btn-neutral float-left" title="SubKanS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="QKan_Formulare.html" class="btn btn-neutral float-right" title="Dialogfenster" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="QKan_Substanzklassifizierung.html" class="btn btn-neutral float-left" title="Substanzklassifizierung - SubKanS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="QKan_workflow.html" class="btn btn-neutral float-right" title="Einführung zum Beispiel 1 „Workflow“" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

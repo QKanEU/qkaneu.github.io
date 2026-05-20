@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanierungsbedarfszahl &mdash; QKan 3.4.10 Dokumentation</title>
+  <title>Sanierungsbedarfszahl &mdash; QKan 3.4.11 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="SubKanS" href="QKan_Substanzklassifizierung.html" />
+    <link rel="next" title="Substanzklassifizierung - SubKanS" href="QKan_Substanzklassifizierung.html" />
     <link rel="prev" title="Zustandsklassifizierung" href="QKan_Zustandsklassifizierung.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.4.10
+                3.4.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,22 +59,28 @@
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">QKan am Beispiel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sanierungsbedarfszahl</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Sanierungsbedarfszahl</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sanierungsbedarfszahl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">Substanzklassifizierung - SubKanS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Beispiele</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Einführung zum Beispiel 1 „Workflow“</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#import-von-flachendaten">Import von Flächendaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#erzeugung-unbefestigter-flachen">Erzeugung unbefestigter Flächen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#vorbereitung-zur-flachenzuordnung">Vorbereitung zur Flächenzuordnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#flachen-mit-haltungen-verknupfen">Flächen mit Haltungen verknüpfen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#export-nach-hystem-extran">Export nach HYSTEM-EXTRAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#ubersicht-videoanleitungen-zum-workflow">Übersicht: Videoanleitungen zum Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#beispiel-2-datenvorbereitung-fur-simulationsrechnung-hystem-extran">Beispiel 2: Datenvorbereitung für Simulationsrechnung (HYSTEM-EXTRAN)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 </ul>
 
         </div>
@@ -103,8 +109,6 @@
              
   <section id="sanierungsbedarfszahl">
 <h1>Sanierungsbedarfszahl<a class="headerlink" href="#sanierungsbedarfszahl" title="Link to this heading"></a></h1>
-<section id="id1">
-<h2>Sanierungsbedarfszahl<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p>Vor der Nutzung dieses Plugins muss zunächst eine Zustandsklassifizierung mit dem Plugin Zustandsklassen durchgeführt werden.
 Zusätzlich müssen in QGIS weitere Angaben wie Baujahr, hydraulische Leistungsfähigkeit und Bodenart ergänzt werden.
 Anschließend kann das Plugin über die Menüleiste unter „Erweiterungen“ gestartet werden.</p>
@@ -148,14 +152,13 @@ Im Vorhinein muss dafür einmalig das Python Modul XIsxWriter installiert werden
 geöffnet werden. Danach müssen die Befehle „cd C:&quot; und „python -m Pip install XIsxWriter“ dort eingegeben werden. Dadurch wird das Modul XIsxWriter installiert und mit dem Plugin
 Sanierungsbedarfszahl kann eine Excel Tabelle ausgegeben werden.</p>
 </section>
-</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="QKan_Zustandsklassifizierung.html" class="btn btn-neutral float-left" title="Zustandsklassifizierung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="QKan_Substanzklassifizierung.html" class="btn btn-neutral float-right" title="SubKanS" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="QKan_Substanzklassifizierung.html" class="btn btn-neutral float-right" title="Substanzklassifizierung - SubKanS" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
