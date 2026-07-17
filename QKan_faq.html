@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ &mdash; QKan 3.3.1 Dokumentation</title>
+  <title>FAQ und Fehler &mdash; QKan 3.4.13 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.2
+                3.4.13
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,9 +52,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#fehlerhafte-anzeige-linienelemente">Fehlerhafte Anzeige Linienelemente</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#fehlerhafte-anzeige-qkan-formulare">Fehlerhafte Anzeige QKan Formulare</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FAQ und Fehler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fehler-beim-update">Fehler beim Update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fehlerhafte-anzeige-von-linienelementen">Fehlerhafte Anzeige von Linienelementen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fehlerhafte-anzeige-von-qkan-formularen">Fehlerhafte Anzeige von QKan Formularen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#objektabfrage-funktioniert-nicht">Objektabfrage funktioniert nicht</a></li>
 </ul>
 </li>
@@ -62,18 +63,29 @@
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">Substanzklassifizierung - SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Beispiele</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Einführung zum Beispiel 1 „Workflow“</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#import-von-flachendaten">Import von Flächendaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#erzeugung-unbefestigter-flachen">Erzeugung unbefestigter Flächen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#vorbereitung-zur-flachenzuordnung">Vorbereitung zur Flächenzuordnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#flachen-mit-haltungen-verknupfen">Flächen mit Haltungen verknüpfen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#export-nach-hystem-extran">Export nach HYSTEM-EXTRAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#ubersicht-videoanleitungen-zum-workflow">Übersicht: Videoanleitungen zum Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#beispiel-2-datenvorbereitung-fur-simulationsrechnung-hystem-extran">Beispiel 2: Datenvorbereitung für Simulationsrechnung (HYSTEM-EXTRAN)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Formulare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
 </ul>
 
@@ -91,7 +103,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">FAQ</li>
+      <li class="breadcrumb-item active">FAQ und Fehler</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/QKan_faq.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -101,35 +113,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="faq">
-<h1>FAQ<a class="headerlink" href="#faq" title="Link to this heading"></a></h1>
-<section id="fehlerhafte-anzeige-linienelemente">
-<h2>Fehlerhafte Anzeige Linienelemente<a class="headerlink" href="#fehlerhafte-anzeige-linienelemente" title="Link to this heading"></a></h2>
+  <section id="faq-und-fehler">
+<h1>FAQ und Fehler<a class="headerlink" href="#faq-und-fehler" title="Link to this heading"></a></h1>
+<section id="fehler-beim-update">
+<h2>Fehler beim Update<a class="headerlink" href="#fehler-beim-update" title="Link to this heading"></a></h2>
+<p><strong>Problem:</strong> Beim Update auf QKan Version 3.4.8 erscheint ein Fenster mit der Fehlermeldung „Konnte Erweiterung ‚qkan‘ nicht laden …“.</p>
+<img alt="_images/faq_updatefehler_348.png" src="_images/faq_updatefehler_348.png" />
+<p><strong>Erläuterung:</strong> Der Grund ist ein Programmierfehler in der vorherigen Version, wodurch diese nicht vollständig deinstalliert werden kann.</p>
+<p><strong>Lösung:</strong> Löschen Sie das vorherige Plugin manuell. Den Speicherort für das Plugin finden Sie über das
+Menü <span class="guilabel">Einstellungen</span> <span class="guilabel">Benutzerprofile</span> <span class="guilabel">Aktuelles Profilverzeichnis öffnen</span>, wenn Sie in den Unterordner
+<em>python/plugins</em> wechseln. Hier müssen Sie nur den Ordner <em>qkan</em> löschen und anschließend QGIS beenden und neu starten. Jetzt
+können Sie QKan wie gewohnt neu installieren.</p>
+</section>
+<section id="fehlerhafte-anzeige-von-linienelementen">
+<h2>Fehlerhafte Anzeige von Linienelementen<a class="headerlink" href="#fehlerhafte-anzeige-von-linienelementen" title="Link to this heading"></a></h2>
 <p><strong>Problem:</strong> Symbole auf Haltungen und Verbindungselementen (Pumpen, Wehre, etc.) wiederholen sich in viel zu engem Abstand</p>
 <p><strong>Lösung:</strong> Der Grund für dieses Problem ist eine Änderung in der Liniendarstellung von QGIS nach Version 3.22: Wenn Projekte mit einer
 höheren QGIS-Version erstellt und anschließend mit einer niedrigeren Version weiterverarbeitet werden, wird das Attribut zur Wiederholung
 von Symbolen auf Linien falsch gespeichert. So wird beispielsweise, wie auf dem Bild unten, der Fließpfeil statt nur mittig nun in einem
 Intervall angezeigt.</p>
 <img alt="_images/symbole_auf_linien.png" src="_images/symbole_auf_linien.png" />
-<p>Zur Fehlerbehebung wird im Menü unter <span class="guilabel">QKan</span> unter dem Punkt <span class="guilabel">Allgemein</span> mit <a class="reference internal" href="_images/Tool_projekt_aktualisieren.png"><img alt="Tool_projekt_aktualisieren" src="_images/Tool_projekt_aktualisieren.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Projekt aktualisieren</span>
+<p>Zur Fehlerbehebung wird im Menü unter <span class="guilabel">QKan</span> unter dem Punkt <span class="guilabel">Allgemein</span> mit <a class="reference internal" href="_images/Tool_projekt_aktualisieren.png"><img alt="Tool_projekt_aktualisieren" src="_images/Tool_projekt_aktualisieren.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Projekt anpassen</span>
 ein Fenster geöffnet, welches ohne eine weitere Auswahl mit <span class="guilabel">OK</span> geschlossen werden kann. Nun sollten die Symbole richtig
 angezeigt werden.</p>
 </section>
-<section id="fehlerhafte-anzeige-qkan-formulare">
-<h2>Fehlerhafte Anzeige QKan Formulare<a class="headerlink" href="#fehlerhafte-anzeige-qkan-formulare" title="Link to this heading"></a></h2>
+<section id="fehlerhafte-anzeige-von-qkan-formularen">
+<h2>Fehlerhafte Anzeige von QKan Formularen<a class="headerlink" href="#fehlerhafte-anzeige-von-qkan-formularen" title="Link to this heading"></a></h2>
 <p><strong>Problem:</strong> QKan Formulare werden in einer falschen Skalierung angezeigt (siehe Bild unten).</p>
 <img alt="_images/Formular_fehlerhaft.png" src="_images/Formular_fehlerhaft.png" />
-<p><strong>Lösung:</strong> Um dieses Problem zu beheben, müssen die grundlegende Grafikeinstellungen richtig konfiguriert sein. Eine Anleitung zur richtigen Konfiguration
+<p><strong>Lösung:</strong> Um dieses Problem zu beheben, müssen die grundlegenden Grafikeinstellungen richtig konfiguriert sein. Eine Anleitung zur richtigen Konfiguration
 ist <a class="reference internal" href="QKan_aufsetzen.html#linkgrafikeinstellungen"><span class="std std-ref">hier</span></a> zu finden.</p>
 </section>
 <section id="objektabfrage-funktioniert-nicht">
 <h2>Objektabfrage funktioniert nicht<a class="headerlink" href="#objektabfrage-funktioniert-nicht" title="Link to this heading"></a></h2>
 <p><strong>Problem:</strong> Bei der Verwendung der Menüfunktion <a class="reference internal" href="_images/Tool_info.png"><img alt="Tool_info" src="_images/Tool_info.png" style="width: 1.25em;" /></a> <span class="guilabel">Objekt abfragen</span> wird nur ein Formular mit tabellarisch
 angeordneten Feldern anstelle eines QKan-Formulares angezeigt.</p>
-<p><strong>Lösung:</strong> Hierfür gibt es zwei mögliche Ursachen, welche auch beide zusammen vorliegen können:</p>
+<p><strong>Lösung:</strong> Hierfür gibt es zwei mögliche Ursachen, die auch beide vorliegen können:</p>
 <p>1. Die Projektdatei wurde (in der Regel zusammen mit der eingebundenen QKan-Datenbank) in ein anderes Verzeichnis verschoben. Ist dies der Fall,
-kann im Menü unter <span class="guilabel">QKan</span> unter dem Punkt <span class="guilabel">Allgemein</span> mit <a class="reference internal" href="_images/Tool_projekt_aktualisieren.png"><img alt="Tool_projekt_aktualisieren" src="_images/Tool_projekt_aktualisieren.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Projekt aktualisieren</span>
-der Pfad wieder hergestellt werden. Dazu muss in dem sich öffnenden Fesnter das Kontrollfeld im Bereich „Layer anpassen &gt; Formularanbindung auf
+kann im Menü unter <span class="guilabel">QKan</span> unter dem Punkt <span class="guilabel">Allgemein</span> mit <a class="reference internal" href="_images/Tool_projekt_aktualisieren.png"><img alt="Tool_projekt_aktualisieren" src="_images/Tool_projekt_aktualisieren.png" style="width: 1.25em;" /></a> <span class="guilabel">QKan-Projekt anpassen</span>
+der Pfad wieder hergestellt werden. Dazu muss in dem sich öffnenden Fenster das Kontrollfeld im Bereich „Layer anpassen &gt; Formularanbindung auf
 QKan-Standard setzten“ sowie das Optionsfeld im Bereich „QKan-Layer &gt; alle anpassen“ aktiviert werden (siehe Bild unten).</p>
 <img alt="_images/formularpfade_wiederherstellen.png" src="_images/formularpfade_wiederherstellen.png" />
 <p>2. Der Modus für die Anzeige von Objektinformationen wurde noch nicht umgestellt. Eine Anleitung für die richtige Einstellung ist
@@ -148,7 +170,7 @@ QKan-Standard setzten“ sowie das Optionsfeld im Bereich „QKan-Layer &gt; all
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2017 - 2022, Hoettges.</p>
+    <p>&#169; Copyright 2017 - 2025, Hoettges.</p>
   </div>
 
   Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem

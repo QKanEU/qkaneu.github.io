@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flächenverarbeitung &mdash; QKan 3.4.8 Dokumentation</title>
+  <title>Flächenverarbeitung &mdash; QKan 3.4.13 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="QKan-Tabellen" href="QKan_Tabellen.html" />
+    <link rel="next" title="Zustandsbewertung" href="QKan_Zustandsbewertung.html" />
     <link rel="prev" title="STRAKAT" href="QKan_STRAKAT.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.4.8
+                3.4.13
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,30 +52,40 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ und Fehler</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Synchronisation von QKan-Projekten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">Substanzklassifizierung - SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Beispiele</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Einführung zum Beispiel 1 „Workflow“</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#import-von-flachendaten">Import von Flächendaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#erzeugung-unbefestigter-flachen">Erzeugung unbefestigter Flächen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#vorbereitung-zur-flachenzuordnung">Vorbereitung zur Flächenzuordnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#flachen-mit-haltungen-verknupfen">Flächen mit Haltungen verknüpfen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#export-nach-hystem-extran">Export nach HYSTEM-EXTRAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#ubersicht-videoanleitungen-zum-workflow">Übersicht: Videoanleitungen zum Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#beispiel-2-datenvorbereitung-fur-simulationsrechnung-hystem-extran">Beispiel 2: Datenvorbereitung für Simulationsrechnung (HYSTEM-EXTRAN)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="QKan_Formulare.html">Formulare</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html">Allgemein</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QKan_Verwaltung.html">Verwaltung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Hystem_Extran.html">Hystem-Extran</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QKan_XML.html">XML-Importe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_M150.html">Datenaustausch mit DWA-M 150</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_ISYBAU.html">Datenaustausch nach ISYBAU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_DYNA.html">DYNA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Mike.html">Mike+</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_SWMM.html">SWMM</a></li>
@@ -101,11 +111,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#neigungsklasse-ermitteln">Neigungsklasse ermitteln</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Zustandsbewertung.html">Zustandsbewertung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Substanzbewertung.html">Substanzbewertung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Ueberflutung.html">Ueberflutung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QKan_Formulare.html#allgemeine-funktionselemente-in-formularen">Allgemeine Funktionselemente in Formularen</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
 </ul>
 
         </div>
@@ -122,7 +134,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="QKan_Formulare.html">Formulare</a></li>
+          <li class="breadcrumb-item"><a href="QKan_Formulare.html">Dialogfenster</a></li>
       <li class="breadcrumb-item active">Flächenverarbeitung</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/QKan_Flaechenverarbeitung.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
@@ -270,7 +282,7 @@ erstellten Verknüpfen aktualisiert und bereinigt werden.</p>
 </section>
 <section id="neigungsklasse-ermitteln">
 <h2>Neigungsklasse ermitteln<a class="headerlink" href="#neigungsklasse-ermitteln" title="Link to this heading"></a></h2>
-<p>Das Tool <a class="reference internal" href="QKan_Bilder/Tool_neigungsklasse.png"><img alt="Tool_neigungsklasse" src="QKan_Bilder/Tool_neigungsklasse.png" style="width: 1.25em;" /></a> <span class="guilabel">Neigungsklassen ermittelt</span> automatisch anhand von DGM Daten die Neigung von Einzelflächen. Im Menüfenster kann ausgewählt werden, ob ein vorhandenes DGM
+<p>Das Tool <a class="reference internal" href="_images/Tool_neigungsklasse.png"><img alt="Tool_neigungsklasse" src="_images/Tool_neigungsklasse.png" style="width: 1.25em;" /></a> <span class="guilabel">Neigungsklassen ermittelt</span> automatisch anhand von DGM Daten die Neigung von Einzelflächen. Im Menüfenster kann ausgewählt werden, ob ein vorhandenes DGM
 (Digitales Geländemodell) verwendet oder die DGM-Daten automatisiert heruntergeladen werden sollen.</p>
 <img alt="_images/neigungsklasse.png" src="_images/neigungsklasse.png" />
 <p>Automatisierter Download:
@@ -290,7 +302,7 @@ Die berechneten Neigungsklassen werden anschließend automatisch in den Layer �
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="QKan_STRAKAT.html" class="btn btn-neutral float-left" title="STRAKAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="QKan_Tabellen.html" class="btn btn-neutral float-right" title="QKan-Tabellen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="QKan_Zustandsbewertung.html" class="btn btn-neutral float-right" title="Zustandsbewertung" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

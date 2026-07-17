@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erstellen und Bearbeiten von Kanalnetzen &mdash; QKan 3.3.1 Dokumentation</title>
+  <title>Erstellen und Bearbeiten von Kanalnetzen &mdash; QKan 3.4.13 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.2
+                3.4.13
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,29 +52,37 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ und Fehler</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Erstellen und Bearbeiten von Kanalnetzen</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#zusatzfunktionen-beim-editieren">Zusatzfunktionen beim Editieren</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#digitalisieren-von-kanalen">Digitalisieren von Kanälen</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#digitalisieren-von-kanalen">Digitalisieren von Kanälen</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">Substanzklassifizierung - SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Beispiele</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Einführung zum Beispiel 1 „Workflow“</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#import-von-flachendaten">Import von Flächendaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#erzeugung-unbefestigter-flachen">Erzeugung unbefestigter Flächen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#vorbereitung-zur-flachenzuordnung">Vorbereitung zur Flächenzuordnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#flachen-mit-haltungen-verknupfen">Flächen mit Haltungen verknüpfen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#export-nach-hystem-extran">Export nach HYSTEM-EXTRAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#ubersicht-videoanleitungen-zum-workflow">Übersicht: Videoanleitungen zum Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#beispiel-2-datenvorbereitung-fur-simulationsrechnung-hystem-extran">Beispiel 2: Datenvorbereitung für Simulationsrechnung (HYSTEM-EXTRAN)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Formulare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
 </ul>
 
@@ -107,19 +115,14 @@
 <p>Bei der Erstellung sowie der Bearbeitung von Kanalnetzen können die QGIS-Standardfunktionen
 verwendet werden. Dabei ist zu beachten, dass die Änderungen erst dann in die QKan-Datenbank
 geschrieben werden, wenn die Änderungen jedes Layers gespeichert wurden.</p>
-<section id="zusatzfunktionen-beim-editieren">
-<h2>Zusatzfunktionen beim Editieren<a class="headerlink" href="#zusatzfunktionen-beim-editieren" title="Link to this heading"></a></h2>
 <p>Sowohl QGIS als auch QKan bietet ein paar sehr nützliche Funktionalitäten an, die hier erläutert
 werden sollen.</p>
 <section id="digitalisieren-von-kanalen">
-<h3>Digitalisieren von Kanälen<a class="headerlink" href="#digitalisieren-von-kanalen" title="Link to this heading"></a></h3>
-<p>Beim Digitalisieren mit QKan ist es wichtig zu berücksichtigen, dass beim Speichern des Haltungslayers Trigger
-ausgelöst werden, die einige sehr nützliche Funktionen ausführen. Deshalb ist es empfehlenswert,
-zunächst die Schächte zu erfassen, dabei die Namen zu vergeben und anschließend den Layer zu speichern.</p>
-<p>Wenn anschließend Haltungen digitalisiert werden und dieser Layer gespeichert wird, werden durch einen
-Trigger die Namen der Schächte, auf die die Haltungen gefangen wurden, jeweils als Schacht oben und Schacht
-unten übernommen.</p>
-</section>
+<h2>Digitalisieren von Kanälen<a class="headerlink" href="#digitalisieren-von-kanalen" title="Link to this heading"></a></h2>
+<p>Beim Digitalisieren sollten zuerst die Schächte erfasst, benannt und gespeichert werden. So können die Trigger ausgenutzt werden,
+die beim Speichern des Haltungslayers ausgelöst werden.
+Werden anschließend die Haltungen digitalisiert und gespeichert, übernimmt ein Trigger automatisch die Namen der gefangenen Schächte
+als Schacht oben und Schacht unten.</p>
 </section>
 </section>
 
@@ -134,7 +137,7 @@ unten übernommen.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2017 - 2022, Hoettges.</p>
+    <p>&#169; Copyright 2017 - 2025, Hoettges.</p>
   </div>
 
   Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem

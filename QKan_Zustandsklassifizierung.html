@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zustandsklassifizierung &mdash; QKan 3.3.1 Dokumentation</title>
+  <title>Zustandsklassifizierung &mdash; QKan 3.4.13 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
@@ -38,7 +38,7 @@
             QKan
           </a>
               <div class="version">
-                3.2
+                3.4.13
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,26 +52,34 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ und Fehler</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Arbeiten mit Flächen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Beispielprojekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Zustandsklassifizierung</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Zustandsklassifizierung</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Zustandsklassifizierung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">Substanzklassifizierung - SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Beispiele</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Einführung zum Beispiel 1 „Workflow“</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#import-von-flachendaten">Import von Flächendaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#erzeugung-unbefestigter-flachen">Erzeugung unbefestigter Flächen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#vorbereitung-zur-flachenzuordnung">Vorbereitung zur Flächenzuordnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#flachen-mit-haltungen-verknupfen">Flächen mit Haltungen verknüpfen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#export-nach-hystem-extran">Export nach HYSTEM-EXTRAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#ubersicht-videoanleitungen-zum-workflow">Übersicht: Videoanleitungen zum Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#beispiel-2-datenvorbereitung-fur-simulationsrechnung-hystem-extran">Beispiel 2: Datenvorbereitung für Simulationsrechnung (HYSTEM-EXTRAN)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Formulare</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
 </ul>
 
@@ -101,16 +109,14 @@
              
   <section id="zustandsklassifizierung">
 <h1>Zustandsklassifizierung<a class="headerlink" href="#zustandsklassifizierung" title="Link to this heading"></a></h1>
-<section id="id1">
-<h2>Zustandsklassifizierung<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<p>Um das Plugin Zustandsklassen zu nutzen, muss im Vorhinein eine Datenbank mit den notwendigen Informationen mit Hilfe des Plugins QKan erstellt werden.
-Dafür muss das Plugin QKan heruntergeladen werden und im Plugin Ordner von QGIS gespeichert werden. Dann kann zum Beispiel die Funktion „Import aus ISYBAU-XML“ genutzt
-werden um die Stammdaten und die Befahrungsdaten zu importieren. Mit Hilfe dieser Funktion wird eine QKan Datenbank erstellt, die alle benötigten Information für das Plugin
-Zustandsklassen enthält.
-Um die Zustandsklassen nun zu ermitteln, muss über die Menüleiste in QGIS die Schaltfläche „QKan“ geklickt werden. Dort kann das Plugin Zustandsklassen ausgewählt werden.</p>
-<img alt="_images/zustandsklassen.png" src="_images/zustandsklassen.png" />
+<p>Für die Nutzung des Plugins Zustandsklassen muss zunächst mit dem Plugin QKan eine Datenbank erstellt werden.
+Dazu wird QKan heruntergeladen und im Plugin-Ordner von QGIS gespeichert. Anschließend können über die Funktion
+„Import aus ISYBAU-XML“ Stamm- und Befahrungsdaten importiert werden. Dabei entsteht eine QKan-Datenbank mit allen
+benötigten Informationen für das Plugin Zustandsklassen.
+Die Zustandsklassen können danach in QGIS über die Menüleiste unter „QKan“ → „Zustandsklassen“ ermittelt werden.</p>
+<img alt="_images/zustand1.png" src="_images/zustand1.png" />
 <p>Daraufhin öffnet sich das im folgenden gezeigte Eingabefenster:</p>
-<img alt="_images/zustandsklassen.png" src="_images/zustandsklassen.png" />
+<img alt="_images/zustand2.png" src="_images/zustand2.png" />
 <dl class="simple">
 <dt>In dem Eingabefenster sind folgende Eingaben möglich:</dt><dd><ul class="simple">
 <li><p>Datenbank</p></li>
@@ -131,9 +137,9 @@ Dann kann jeweils für die Haltungen, Hausanschlussleitungen und Schächte ausge
 Mit einem Klick auf OK wird das Plugin gestartet und eine Klassifizierung vorgenommen. Nachdem das Plugin durchgelaufen ist, sind die neuen Daten in der Datenbank enthalten
 und neue Layer wurden dem Projekt zugefügt.
 Wenn die Klassifizierung nach DWA-M 149 durchgeführt wurde, werden die in der folgenden Abbildung gezeigten Layer für die Haltungen und Schächte dem Projekt hinzugefügt.</p>
-<img alt="_images/zustandsklassen.png" src="_images/zustandsklassen.png" />
+<a class="reference internal image-reference" href="_images/zustand3.png"><img alt="_images/zustand3.png" src="_images/zustand3.png" style="width: 326.9px; height: 163.1px;" /></a>
 <p>Bei einer Klassifizierung nach ISYBAU werden die in der folgenden Abbildung gezeigten Layer für die Haltungen und Schächte dem Projekt hinzugefügt.</p>
-<img alt="_images/zustandsklassen.png" src="_images/zustandsklassen.png" />
+<img alt="_images/zustand4.png" src="_images/zustand4.png" />
 <p>Bei einer Klassifizierung nach DWA-M 149 gibt es bei einigen Schäden die Klassifizierung „Einzelfallbetrachtung“. Diese können wie nach DWA vorgesehen über die Attributtabelle
 händisch nach bewertet werden. Alternativ bietet das Tool „Zustandsklassen“ die Möglichkeit eine automatisierte Ergänzung der „Einzelfallbetrachtungen“ durch eine Bewertung nach
 ISYBAU vorzunehmen.
@@ -141,7 +147,6 @@ Im Nachgang an diese Ergänzungen ist die Neuberechnung der Gesamtklassifizierun
 Einzelfallbetrachtung“ durchgeführt werden.</p>
 <p>Alternativ kann die Zustandsklassifizierung auch übersprungen werden und nur die Tabellen angelegt werden. Dabei werden schon vorhandene Klassifizierungen aus den Grundlagentabellen
 übernommen.</p>
-</section>
 </section>
 
 
@@ -155,7 +160,7 @@ Einzelfallbetrachtung“ durchgeführt werden.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2017 - 2022, Hoettges.</p>
+    <p>&#169; Copyright 2017 - 2025, Hoettges.</p>
   </div>
 
   Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem

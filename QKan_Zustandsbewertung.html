@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zustandsbewertung &mdash; QKan 3.4.13 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=3d1d8b85"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=4a9fcc6a"></script>
+        <script src="_static/doctools.js?v=a6d80eb4"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=57cff002"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Substanzbewertung" href="QKan_Substanzbewertung.html" />
+    <link rel="prev" title="Flächenverarbeitung" href="QKan_Flaechenverarbeitung.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            QKan
+          </a>
+              <div class="version">
+                3.4.13
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Allgemeines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_allgemein.html">Was ist QKan?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_aufsetzen.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_faq.html">FAQ und Fehler</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Funktionen</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Datenaustausch.html">Datenaustausch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_flaechen.html">Flächenverarbeitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_edit.html">Erstellen und Bearbeiten von Kanalnetzen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Zustandsklassifizierung.html">Zustandsklassifizierung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Sanierungsbedarfszahl.html">Sanierungsbedarfszahl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Substanzklassifizierung.html">Substanzklassifizierung - SubKanS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Beispiele</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html">Einführung zum Beispiel 1 „Workflow“</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#import-von-flachendaten">Import von Flächendaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#erzeugung-unbefestigter-flachen">Erzeugung unbefestigter Flächen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#vorbereitung-zur-flachenzuordnung">Vorbereitung zur Flächenzuordnung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#flachen-mit-haltungen-verknupfen">Flächen mit Haltungen verknüpfen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#export-nach-hystem-extran">Export nach HYSTEM-EXTRAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#ubersicht-videoanleitungen-zum-workflow">Übersicht: Videoanleitungen zum Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#beispiel-2-datenvorbereitung-fur-simulationsrechnung-hystem-extran">Beispiel 2: Datenvorbereitung für Simulationsrechnung (HYSTEM-EXTRAN)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html">Allgemein</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Synchro.html">Synchronisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Hystem_Extran.html">Hystem-Extran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_M150.html">Datenaustausch mit DWA-M 150</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_ISYBAU.html">Datenaustausch nach ISYBAU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_DYNA.html">DYNA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Mike.html">Mike+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_SWMM.html">SWMM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_STRAKAT.html">STRAKAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Flaechenverarbeitung.html">Flächenverarbeitung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Zustandsbewertung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#zustandsklassifizierung">Zustandsklassifizierung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sanierungsbedarfszahl">Sanierungsbedarfszahl</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Substanzbewertung.html">Substanzbewertung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Ueberflutung.html">Ueberflutung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Formulare.html#allgemeine-funktionselemente-in-formularen">Allgemeine Funktionselemente in Formularen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">QKan</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="QKan_Formulare.html">Dialogfenster</a></li>
+      <li class="breadcrumb-item active">Zustandsbewertung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/QKan_Zustandsbewertung.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="zustandsbewertung">
+<h1>Zustandsbewertung<a class="headerlink" href="#zustandsbewertung" title="Link to this heading"></a></h1>
+<section id="zustandsklassifizierung">
+<span id="index-0"></span><h2>Zustandsklassifizierung<a class="headerlink" href="#zustandsklassifizierung" title="Link to this heading"></a></h2>
+<p>Mit der Funktion <a class="reference internal" href="_images/Tool_zustandsklassen.png"><img alt="Tool_zustandsklassifizierung" src="_images/Tool_zustandsklassen.png" style="width: 1.25em;" /></a> <span class="guilabel">Zustandsklassifizierung</span> kann eine automatisierte Bewertung des baulichen Zustands des Kanalnetzes nach den Regelwerken
+DWA-M 149-3 oder ISYBAU durchgeführt werden.
+Diese Funktion dient der einheitlichen und reproduzierbaren Einstufung von Schäden an Haltungen, Schächten und Hausanschlussleitungen,
+die im Rahmen einer Kanalinspektion erfasst wurden.</p>
+<img alt="_images/zustandsklassen.png" src="_images/zustandsklassen.png" />
+<p>Zunächst wird die QKan-Datenbank ausgewählt, in der die Schadensdaten gespeichert sind.
+Zusätzlich kann über ein Datum festgelegt werden, welche Schäden in die Bewertung einbezogen werden sollen (z. B. nur Inspektionen an einem bestimmten Stichtag).
+Es kann entschieden werden, ob für die in der Datenbank enthaltenen Schadenskürzel automatisch die zugehörigen Langtexte erzeugt werden sollen.
+Diese Option erleichtert die Interpretation und Dokumentation der Schadensdaten, insbesondere bei der späteren Berichtsausgabe.</p>
+<p>Anschließend wird festgelegt, ob die Klassifizierung nach DWA-M 149-3 oder ISYBAU durchgeführt werden soll.
+Die Bewertung erfolgt dabei automatisiert anhand der in der Datenbank enthaltenen Schadenskürzel und der jeweiligen Regelwerksdefinitionen.</p>
+<p>Nach dem Start der Klassifizierung werden alle relevanten Schäden analysiert und die entsprechenden Zustandsklassen (z. B. 0–5) für jedes Objekt berechnet.
+Die Ergebnisse werden in die QKan-Datenbank zurückgeschrieben und können anschließend in Berichten, Diagrammen oder Übersichtsplänen visualisiert werden.</p>
+</section>
+<section id="sanierungsbedarfszahl">
+<span id="index-1"></span><h2>Sanierungsbedarfszahl<a class="headerlink" href="#sanierungsbedarfszahl" title="Link to this heading"></a></h2>
+<p>Mit dem Tool <a class="reference internal" href="_images/Tool_sanierungsbedarfszahl.png"><img alt="Tool_sanierungsbedarfszahl" src="_images/Tool_sanierungsbedarfszahl.png" style="width: 1.25em;" /></a> <span class="guilabel">Sanierungsbedarfszahl</span> kann im Anschluss an die Zustandsklassifizierung die Sanierungsbedarfszahl nach DWA-M 149-3 bzw.
+die Schadenszahl nach ISYBAU ermittelt werden.
+Diese Kennzahlen dienen der quantitativen Bewertung des Sanierungsbedarfs einzelner Haltungen, Schächte oder Hausanschlussleitungen und
+unterstützen die Priorisierung von Sanierungsmaßnahmen im Kanalnetz.</p>
+<img alt="_images/sanierung2.png" src="_images/sanierung2.png" />
+<p>Bevor die Berechnung durchgeführt werden kann, müssen bestimmte Grundlagendaten in der QKan-Datenbank vorhanden oder ergänzt werden. Dazu gehören insbesondere
+Angaben zum Grundwasserstand (z. B. mittlere Tiefe oder Abstand zur Rohrsohle), Materialdaten der Haltungen und Schächte sowie
+Ergebnisse der Zustandsklassifizierung (nach DWA-M 149-3 oder ISYBAU).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="QKan_Flaechenverarbeitung.html" class="btn btn-neutral float-left" title="Flächenverarbeitung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="QKan_Substanzbewertung.html" class="btn btn-neutral float-right" title="Substanzbewertung" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017 - 2025, Hoettges.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

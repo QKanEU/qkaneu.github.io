@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+/scripts/*.zip
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+test_*/
+test_*.zip
+*.sqlite
+*.xml
+
+# Translations
+*.mo
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+# virtualenv
+venv/
+ENV/
+
+# Links
+*.lnk
+
+# Sicher
+sicher/
+*.bak
+
+#PyCharm
+.idea
+
+#FreeFileSync
+sync.ffs_db
+
+.mypy_cache/
+
+# Temporary QGIS files
+*.qgs~
