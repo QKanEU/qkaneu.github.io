@@ -1,27 +1,27 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erstellung von QKan-Plugins &mdash; QKan 3.4.13 Dokumentation</title>
+  <title>Erstellung von QKan-Plugins &mdash; QKan 3.4.18 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=3d1d8b85"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=4a9fcc6a"></script>
-        <script src="_static/doctools.js?v=a6d80eb4"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="_static/translations.js?v=57cff002"></script>
+      <script src="_static/jquery.js?v=3d1d8b85"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4a9fcc6a"></script>
+      <script src="_static/doctools.js?v=a6d80eb4"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=57cff002"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
-    <link rel="search" title="Suche" href="search.html" /> 
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="QKan-Tabellen" href="QKan_Tabellen.html" />
+    <link rel="prev" title="Ueberflutung" href="QKan_Ueberflutung.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,9 +35,6 @@
           <a href="index.html" class="icon icon-home">
             QKan
           </a>
-              <div class="version">
-                3.4.13
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
@@ -76,8 +73,37 @@
 <li class="toctree-l1"><a class="reference internal" href="QKan_workflow.html#beispiel-2-datenvorbereitung-fur-simulationsrechnung-hystem-extran">Beispiel 2: Datenvorbereitung für Simulationsrechnung (HYSTEM-EXTRAN)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Übersicht</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="QKan_Formulare.html">Dialogfenster</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="QKan_Formulare_Allgemein.html">Allgemein</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Daten.html">Daten: prüfen, auswählen, darstellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Synchronisation.html">Vergleich und Synchronisation von QKan-Datenbanken</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Hystem_Extran.html">Hystem-Extran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_M150.html">Datenaustausch mit DWA-M 150</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_ISYBAU.html">Datenaustausch nach ISYBAU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_DYNA.html">DYNA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Mike.html">Mike+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_SWMM.html">SWMM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_STRAKAT.html">STRAKAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Flaechenverarbeitung.html">Flächenverarbeitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Zustandsbewertung.html">Zustandsbewertung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Substanzbewertung.html">Substanzbewertung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Ueberflutung.html">Ueberflutung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Erstellung von QKan-Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vorbereitung-des-moduls">Vorbereitung des Moduls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erzeugen-von-modul-icons">Erzeugen von Modul-Icons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anpassungen-in-den-moduldateien-py">Anpassungen in den Moduldateien (<cite>*</cite>.py)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#help-schaltflache-anbinden">Help-Schaltfläche anbinden</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zentrale-plugin-dateien">Zentrale Plugin-Dateien</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#einbindung-in-die-qkan-plugins">Einbindung in die QKan-Plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vorlage-plugin-template">Vorlage-Plugin „Template“</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="QKan_Formulare.html#allgemeine-funktionselemente-in-formularen">Allgemeine Funktionselemente in Formularen</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_Tabellen.html">QKan-Tabellen</a></li>
 </ul>
 
@@ -95,6 +121,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="QKan_Formulare.html">Dialogfenster</a></li>
       <li class="breadcrumb-item active">Erstellung von QKan-Plugins</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/QKan_Plugins.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
@@ -210,7 +237,10 @@ auf Groß- und Kleinschreibung zu achten ist.</p>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="QKan_Ueberflutung.html" class="btn btn-neutral float-left" title="Ueberflutung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="QKan_Tabellen.html" class="btn btn-neutral float-right" title="QKan-Tabellen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

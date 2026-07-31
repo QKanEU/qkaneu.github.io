@@ -1,24 +1,22 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daten: prüfen, auswählen, darstellen &mdash; QKan 3.4.13 Dokumentation</title>
+  <title>Daten: prüfen, auswählen, darstellen &mdash; QKan 3.4.18 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=8209df7b" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=3d1d8b85"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=4a9fcc6a"></script>
-        <script src="_static/doctools.js?v=a6d80eb4"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="_static/translations.js?v=57cff002"></script>
+      <script src="_static/jquery.js?v=3d1d8b85"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4a9fcc6a"></script>
+      <script src="_static/doctools.js?v=a6d80eb4"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=57cff002"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
@@ -37,9 +35,6 @@
           <a href="index.html" class="icon icon-home">
             QKan
           </a>
-              <div class="version">
-                3.4.13
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
@@ -62,6 +57,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#plausibilitatsprufung">Plausibilitätsprüfung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#auswahl-erweitern-netzverfolgung">Auswahl erweitern / Netzverfolgung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#langsschnitt">Längsschnitt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transformation">Transformation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="QKan_qfield.html">QKan-Projekte auf dem Tablet</a></li>
@@ -198,6 +194,20 @@ Damit die Anzeige des maximalen Wasserstands, der animierte Längsschnitt sowie 
 Im Anschluss kann im Reiter „Animierter Längsschnitt“ über den Button „Längsschnitt anzeigen“ der animierte Längsschnitt geöffnet werden
 Die Animation kann anschließend über die Steuerelemente im unteren Bereich in Bezug auf Abspielgeschwindigkeit und Zeitpunkt bedient werden.
 Im Reiter „Ganglinien“ lassen sich mit dem Button „Ganglinie anzeigen“ verschiedene Ganglinien aus den Ergebnisdaten erzeugen – beispielsweise Zufluss, Wasserstand oder Durchfluss.</p>
+</section>
+<section id="transformation">
+<span id="index-2"></span><h2>Transformation<a class="headerlink" href="#transformation" title="Link to this heading"></a></h2>
+<p>Mit dem Tool <a class="reference internal" href="_images/icon_transformation.png"><img alt="Tool_transformation" src="_images/icon_transformation.png" style="width: 1.25em;" /></a> <span class="guilabel">Transformation</span> können alle Tabellen eines Projektes von einem anderen Koordinatensystem in das für ein Projekt festgelegtes
+Koordinatensystem transformiert werden.</p>
+<img alt="_images/transformation.png" src="_images/transformation.png" />
+<p>Falls Kanaldaten mit einer der QKan-Importfunktionen (M150, HYSTEM-EXTRAN, Clipboard, etc.) importiert werden sollen, diese aber in einem anderen als dem für das QKan-Projekt
+vorgesehenen Koordinatensystem gespeichert sind, wird folgendes Vorgehen empfohlen, um die Daten nach dem Import in das vorgesehene Koordinatensystem zu transformieren:</p>
+<ol class="arabic simple">
+<li><p>Import der Daten, wobei bereits das endgültig vorgesehene Koordinatensystem eingestellt werden muss. Die Daten erscheinen zunächst an einer falschen Position im Kartenfenster.</p></li>
+<li><p>Transformation, wobei im Formular nur das Koordinatensystem der Quelldaten ausgewählt werden muss. Das Koordinatensystem des Zielsystems ist ja durch das Projekt bereits vorgegeben.</p></li>
+<li><p>Es empfiehlt sich, das Projekt nach der Transformation neu zu laden, weil dabei einige interne geographische Indizes aktualisiert werden, die z. B. für die Layer-Funktion
+<span class="guilabel">Auf Layer Zoomen</span> benötigt werden.</p></li>
+</ol>
 </section>
 </section>
 
